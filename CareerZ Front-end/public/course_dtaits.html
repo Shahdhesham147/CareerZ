@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Css links -->  
+  <link rel="stylesheet" href="../src/css/all.min.css">
+  <link rel="stylesheet" href="../src/icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../src/css/course_dtaits.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Stack Web Development</title>
+
+</head>
+<body>
+ 
+  <nav class="navbar back-default navbar-expand-md fixed-top pb-0" id="navbar">
+    <div class="container-fluid mx-5">
+      
+      <a class="navbar-brand" href="#">
+        <img src="../src/img/New logo 1.png" alt="" class="logo">
+      </a>
+    
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fa-lg d-flex justify-content-center align-items-center my-3"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item p-3"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="englishcourses.html">Courses</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship.html">Internship</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+        
+        <form class="d-flex">
+    <div class="dropdown">
+  <i class="fa-solid fa-circle-user Icon m-3 mx-5 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown" 
+     aria-expanded="false"
+     style="font-size: 30px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+ <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+    <li><a class="dropdown-item" href="All SignUp.html"> sign up</a></li>
+    <li><a class="dropdown-item" href="All login.html">login</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">log out</a></li>
+  </ul>
+</div>
+          <button class="" id="Btn">Arabic</button>
+        </form>
+        
+      </div>
+    </div>    
+
+  </nav>
+
+  <section class="course-header">
+    
+    <div class="search_container container">
+      <div class="d-flex align-items-center justify-content-between">
+        
+        <form class="flex-grow-1 me-3">
+          <div class="input-group search-box">
+            <span class="input-group-text bg-transparent border-0 p-0 pe-2">
+              <i class="fa fa-bars"></i>
+            </span>
+            <input type="text" class="form-control border-0" placeholder="Search for a product">
+            <span class="input-group-text bg-transparent border-0 ps-2">
+              <i class="fa fa-search"></i>
+            </span>
+          </div>
+        </form>
+        
+        <i class="fa fa-shopping-cart cart-icon"></i>
+
+      </div>
+    </div>
+    
+    <div class="course-card container">
+      <div class="row row-cols-1 row-cols-md-2">
+
+        <div class="col my-5">
+          <div class="course_title w-100">
+            <h2 >Full Stack Web Development</h2>
+            <p class="w-100">
+              Your career in full stack web development starts here. 
+              Build responsive websites, work with databases, 
+              and master React.js & Node.js through hands-on projects 
+              and real-world applications.
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="stats">
+              <span><i class="fas fa-users"></i> 1,250 Students</span>
+              <span><i class="fas fa-clock"></i> 120 Hours</span>
+              <span><i class="fas fa-book"></i> 20 Modules</span>
+            </div>
+            <div class="price mt-4">
+              <button>Enroll Now</button>
+              <span class=" ps-2">500 LE</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col my-5">
+          <img src="../src/img/image 33.png" alt="course" class="w-100">
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  
+  <section class="course_about">
+    <div class="container">
+    
+    <div class="tabs m-auto py-2 rounded-3 pt-5">
+      <button class="tab  " onclick="showTab('overview')">Overview</button>
+      <button class="tab active" onclick="showTab('curriculum')">Curriculum</button>
+      <button class="tab " onclick="showTab('reviews')">Reviews</button>
+    </div>
+    
+    <div id="overview" class="tab-content container h-100 ">
+      <p>
+      This courese covers everything from HTML, CSS, and JavaScript
+      to backend development with Node.js, Express, and database
+      like MongoDB. You'll also learn React for building dynamic
+      Uls and how to deploy full-stack applications
+      </p>
+    </div>
+
+    <div id="curriculum" class="tab-content container h-100 " style="display:none;">
+      <div class="modules">
+
+        <div class="row row-cols-1 row-cols-md-2">
+          
+          <div class="col">
+            <div class="module">
+              <h4>Module 1: Introduction to Web Development</h4>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="preview d-flex">
+              <div class="preview_icon p-2">
+                <img src="../src/img/preview.png" style="width: 20px;">
+              </div>
+              <p class="p-2 ">Preview</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2">
+          
+          <div class="col">
+            <div class="module">
+              <h4>Module 2: HTML & CSS Fundamentals</h4>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="preview d-flex">
+              <div class="preview_icon p-2">
+                <img src="../src/img/preview.png" style="width: 20px;">
+              </div>
+              <p class="p-2 ">Preview</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2">
+          
+          <div class="col">
+            <div class="module">
+              <h4>Module 3: JavaScript Basics </h4>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="preview d-flex">
+              <div class="preview_icon p-2">
+                <img src="../src/img/preview.png" style="width: 20px;">
+              </div>
+              <p class="p-2 ">Preview</p>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+    
+    <div id="reviews" class="tab-content container h-100 " style="display:none;">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, molestiae nam asperiores praesentium corporis maiores voluptatibus molestias, iure quasi, voluptas animi voluptatum placeat itaque rem sapiente possimus ratione incidunt rerum.</p>
+    </div>
+
+  </div>
+  </section>
+  
+  <section class="learn pb-5">
+    <div class="container pt-2">
+      <h2 class="pb-2">What you’ll learn</h2>
+      
+      <div class="learn_scroll">
+        
+        <div class="learn_card mb-5 ">
+          <div class="learn_title text-center w-300">
+            <h3>• Build responsive websites</h3>
+            <p>Connect with databases</p>
+          </div>
+        </div>
+
+        <div class="learn_card mb-5 ">
+          <div class="learn_title text-center w-300">
+            <h3>• Work with React & Node.js</h3>
+            <p>Build full-stack apps</p>
+          </div>
+        </div>
+
+        <div class="learn_card mb-5">
+          <div class="learn_title text-center w-300">
+            <h3>• Deploy full-stack apps</h3>
+            <p>Prepare for the job market</p>
+          </div>
+        </div>
+        
+        <div class="learn_card mb-5">
+          <div class="learn_title text-center w-300">
+            <h3>• Deploy full-stack apps</h3>
+            <p>Prepare for the job market</p>
+          </div>
+        </div>
+
+        <div class="learn_card mb-5">
+          <div class="learn_title text-center w-300">
+            <h3>• Deploy full-stack apps</h3>
+            <p>Prepare for the job market</p>
+          </div>
+        </div>
+
+        <div class="learn_card mb-5">
+          <div class="learn_title text-center w-300">
+            <h3>• Deploy full-stack apps</h3>
+            <p>Prepare for the job market</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+  <section class="recommended pb-5">
+    <div class="container pt-5 ">
+      
+      <h3>Recommended for you</h3>
+      <div class="cards pt-3 pb-5">
+        
+        <div class="rec-card">
+          <img src="../src/img/image 27.png" alt="">
+          <h4>UI/UX Design</h4>
+          <p>Beginner</p>
+          <span>⭐ 4.7 | 10 total hours</span>
+          <button class="buy-btn">Free - Buy Now</button>
+        </div>
+        
+        <div class="rec-card">
+          <img src="../src/img/image 34.png" alt="">
+          <h4>Data Science</h4>
+          <p>Beginner</p>
+          <span>⭐ 4.7 | 20 total hours</span>
+          <button class="buy-btn">Free - Buy Now</button>
+        </div>
+      
+        <div class="rec-card">
+          <img src="../src/img/image 32.png" alt="">
+          <h4>Digital Marketing</h4>
+          <p>Beginner</p>
+          <span>⭐ 4.6 | 18 total hours</span>
+          <button class="buy-btn">100 LE - Buy Now</button>
+        </div>
+
+        <div class="rec-card">
+          <img src="../src/img/image 27.png" alt="">
+          <h4>UI/UX Design</h4>
+          <p>Beginner</p>
+          <span>⭐ 4.7 | 10 total hours</span>
+          <button class="buy-btn">Free - Buy Now</button>
+        </div>
+        
+        <div class="rec-card">
+          <img src="../src/img/image 34.png" alt="">
+          <h4>Data Science</h4>
+          <p>Beginner</p>
+          <span>⭐ 4.7 | 20 total hours</span>
+          <button class="buy-btn">Free - Buy Now</button>
+        </div>
+      
+        <div class="rec-card">
+          <img src="../src/img/image 32.png" alt="">
+          <h4>Digital Marketing</h4>
+          <p>Beginner</p>
+          <span>⭐ 4.6 | 18 total hours</span>
+          <button class="buy-btn">100 LE - Buy Now</button>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+  
+  
+  
+<script>
+  const btn = document.getElementById("Btn");
+
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (btn.textContent.trim() === "Arabic") {
+      btn.textContent = "EN"; 
+      window.location.href = "course_dtaits_Arabic.html";
+    } else {
+      btn.textContent = "Arabic";
+      window.location.href = "course_dtaits.html";
+    }
+  });
+</script>
+<script src="../src/js/bootstrap.bundle.min.js"></script>
+  
+  <script defer src="../src/js/course_.js"></script>
+
+</body>
+</html>

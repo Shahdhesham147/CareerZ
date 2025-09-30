@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NAVBAR */
+.logo{
+    width: 60px;
+    height: 70px;
+    margin-bottom: 30px;
+  
+}
+
+.icon{
+    font-size: 25px;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); 
+}
+  
+.nav-back{
+    background-color: rgba(207, 238, 255);
+    transition: all 0.7s ease-in-out;
+   
+}
+  
+.back-trans{
+    background-color: transparent;
+
+}
+.FORM{
+  margin-top: 80px;
+}
+#BTN{
+    background-color: #b0e9fb;
+    width:60px;
+    height: 50px; 
+    border-radius: 50%;
+    position: relative;
+    border-color: #b0e9fb;
+    font-weight: bold;
+}
+#navbar{
+  background-color: white;
+}
+.SignUP{
+  margin-top: 100px;
+}
+
+.All{
+position: relative;
+top: 150px;
+width: 600px;
+height: 400px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+border-radius: 20px;
+margin-left: 400px;
+
+
+}
+.Card{
+  margin-top: 80px;
+ margin-left: 150px;
+}
+h4 {
+text-align: center;
+position: relative;
+top: 50px;
+
+}
+label{
+font-weight: bold;
+position: relative;
+bottom: 10px;
+
+
+}
+input {
+height: 40px;
+width: 300px;
+border: 1px solid #ccc;
+padding: 10px;
+border-radius: 10px;
+
+}
+
+.btn .reset {
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: #0D4671;
+  border-color: #0D4671;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  width: 100px;
+  margin-left: 90px;
+
+}
+
+.btn .reset:hover {
+  background: rgb(10, 53, 87);
+}
+
+/* Responsive */
+@media (max-width: 580px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  input, 
+  .btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

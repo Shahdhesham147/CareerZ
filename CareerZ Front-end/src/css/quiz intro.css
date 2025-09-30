@@ -1,0 +1,146 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #DEF7FF80;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  text-align: center;
+  padding: 20px;
+  position: relative; 
+  overflow: hidden; 
+}
+
+/* NAVBAR */
+.logo{
+    width: 60px;
+    height: 70px;
+    margin-bottom: 30px;
+  
+}
+
+.icon{
+    font-size: 25px;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); 
+}
+  
+.nav-back{
+    background-color: rgba(207, 238, 255);
+    transition: all 0.7s ease-in-out;
+   
+}
+  
+.back-trans{
+    background-color: transparent;
+
+}
+.FORM{
+  margin-top: 80px;
+}
+#BTN{
+    background-color: #b0e9fb;
+    width:60px;
+    height: 50px; 
+    border-radius: 50%;
+    position: relative;
+    border-color: #b0e9fb;
+    font-weight: bold;
+}
+#navbar{
+  background-color: white;
+}
+.SignUP{
+  margin-top: 100px;
+}
+
+main {
+  max-width: 800px;
+  background-color:#DEF7FF ;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.All{
+  margin-top: 130px;
+}
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+}
+
+
+p {
+  font-size: 20px;
+  color:#000000A3 ;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+
+.btn button {
+  background-color:#0D4671 ;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn button:hover {
+  background-color: #0368a7;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .btn button {
+    padding: 12px 25px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 55px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .btn button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

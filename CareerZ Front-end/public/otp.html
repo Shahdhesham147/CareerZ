@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/css/otp.css">
+    <title>OTP Verification</title>
+</head>                                                                                                                                                                                         
+<body>
+
+    <!-- particles.js container --> <div id="particles-js"></div> 
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+    <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+    <div class="container-fluid mx-5">
+    <a class="navbar-brand" href="#">
+      <img src="../src/img/newlogo.png" alt="" class="logo">
+    </a>
+      <button class="" id="BTN" type="button">AR</button>
+    </div>
+    </nav>  
+<!-- <div class="All"> -->
+    <div class="container">
+      <form id="otpForm">
+        <div class="otp-card-inputs">
+            <h3>OTP Verification</h3>
+            <br>
+        <div >
+            <input type="text" maxlength="1" autofocus name="otp1" id="otp1">
+            <input type="text" disabled maxlength="1" name="otp2" id="otp2">
+            <input type="text" disabled maxlength="1" name="otp3" id="otp3">
+            <input type="text" disabled maxlength="1" name="otp4" id="otp4">
+            <input type="text" disabled maxlength="1" name="otp5" id="otp5">
+        </div>
+        </div>
+        <div class="tany">
+            <p>If you didn’t receive a code&nbsp;
+            <button  type="submit" id="resendBtn" name="resend" class="resend">Resend</button>
+            </p>
+        </div>
+        <br>  
+        <button type="submit" class="verify" id="verifyBtn">Verify</button>
+</form>
+ <!-- </div> -->
+</div>
+
+<script>
+// inputs auto tab
+document.addEventListener("DOMContentLoaded", () => {
+  const inputs = document.querySelectorAll("#otpForm input");
+
+  inputs.forEach((input, index) => {
+    input.addEventListener("input", () => {
+      if (input.value.length === 1 && index < inputs.length - 1) {
+        inputs[index + 1].disabled = false;
+        inputs[index + 1].focus();
+      }
+    });
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace" && !input.value && index > 0) {
+        inputs[index].disabled = true;
+        inputs[index - 1].focus();
+      }
+    });
+  });
+});
+
+// verify otp API 
+ document.addEventListener("DOMContentLoaded", ()=>{
+    const verifyBtn = document.getElementById('verifyBtn');
+    const email = localStorage.getItem("resetEmail");
+    function getOTPFromInputs() {
+      let otp = '';
+      for (let i = 1; i <= 5; i++) {
+        const input = document.getElementById('otp' + i);
+        otp += input.value;
+      }
+      return otp;
+    }
+
+    verifyBtn.addEventListener('click',async () => {
+      const otp = getOTPFromInputs().trim();
+
+      if(!email){
+        alert("Email not found. Please restart the process.")
+        window.location.href = "forgetpass.html";
+        return;
+      }
+
+      if(otp.length !== 5 || isNaN(otp)){
+        alert("Please enter the full 5-digit OTP.")
+        return;
+      }
+
+      try {
+        const response = await fetch('http://localhost:8888/verify-otp',{
+          method: 'POST',
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ email, otp })
+        })
+
+        const data = await response.json();
+        if(response.ok){
+          alert('OTP verified successfully. You can now reset your password.');
+          localStorage.setItem("resetEmail", email);
+          window.location.href = "./resetpass.html";
+        }else{
+          alert(data.message || 'Invalid OTP. Please try again.');
+        }
+
+      } catch (error) {
+        console.error("Error verifying OTP:", error);
+        alert("Something went wrong. Try again.");
+      }
+    })
+  })
+
+// Resend OTP
+document.addEventListener("DOMContentLoaded", ()=>{
+  const resendBtn = document.getElementById('resendBtn')
+  const email = localStorage.getItem("resetEmail")
+
+  resendBtn.addEventListener('click', async () => {
+    if(!email){
+      alert("Email not found. Please restart the process.");
+      window.location.href = "forgetpass.html";
+      return;
+    }
+
+    try {
+      const response = await fetch('http://localhost:8888/forgot-password',{
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email })
+      })
+
+      const data = await response.json();
+      if(response.ok){
+        alert('A new OTP has been sent to ' + email);
+      }else{
+        alert(data.message || 'Failed to resend OTP. Please try again later.');
+      }
+    } catch (error) {
+      console.error("Error resending OTP:", error);
+      alert("Something went wrong. Try again.");
+    }
+  })
+
+})
+
+  // زرار اللغة
+    const btn = document.getElementById("BTN");
+
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (btn.textContent.trim() === "AR") {
+      btn.textContent = "EN"; 
+      window.location.href = "otp_Arabic.html";
+    } else {
+      btn.textContent = "AR";
+      window.location.href = "otp.html";
+    }
+  });
+</script>
+<script src="../src/js/particles.js"></script>
+     <script src="../src/bootstarp/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

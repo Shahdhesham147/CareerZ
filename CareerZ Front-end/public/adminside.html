@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../src/css/adminside.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">
+      <img src="../src/img/newlogo.png" alt="Logo">
+      <!-- <h3>My Dashboard</h3> -->
+    </div>
+    <div class="profile">
+      <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png" alt="User">
+    </div>
+  </header>
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <!-- Home -->
+    <a href="#" id="home-link">
+      <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M2.25 13.5a8.25 8.25 0 018.25-8.25.75.75 0 01.75.75v6.75H18a.75.75 0 01.75.75 8.25 8.25 0 01-16.5 0z" clip-rule="evenodd"></path>
+          <path fill-rule="evenodd" d="M12.75 3a.75.75 0 01.75-.75 8.25 8.25 0 018.25 8.25.75.75 0 01-.75.75h-7.5a.75.75 0 01-.75-.75V3z" clip-rule="evenodd"></path>
+        </svg>
+      </svg>
+      <span>Home</span>
+    </a>
+    <!-- Orders -->
+    <a href="#" id="orders-link">
+      <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"></path>
+        </svg>
+      </svg>
+      <span>Orders</span>
+    </a>
+    <a href="#" id="customers-link">👥 <span>Customers</span></a>
+  </nav>
+  <main class="main" >
+  <section id="home-section">
+  <h4>Reports</h4>
+
+  <div class="grid">
+    <div class="card">
+      <div class="avatar">🛒</div>
+      <div class="stats">
+        <span>Orders</span>
+        <h6>5610</h6>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="avatar">📦</div>
+      <div class="stats">
+        <span>Products</span>
+        <h6>23</h6>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="avatar">💳</div>
+      <div class="stats">
+        <span>Transactions</span>
+        <h6>1942</h6>
+      </div>
+    </div>
+  </div>
+
+  <div class="kpi-card">
+    <h5>Key Performance Indicators</h5>
+    <hr>
+    <div class="kpi-grid">
+      <div class="kpi-box">
+        <span>Revenue</span>
+        <h6>$4,800.00</h6>
+      </div>
+      <div class="kpi-box">
+        <span>NET</span>
+        <h6>$4,900.24</h6>
+      </div>
+      <div class="kpi-box">
+        <span>Pending orders</span>
+        <h6>$1,600.50</h6>
+      </div>
+      <div class="kpi-box">
+        <span>Due</span>
+        <h6>$6,900.10</h6>
+      </div>
+      <div class="kpi-box">
+        <span>Overdue</span>
+        <h6>$6,500.80</h6>
+      </div>
+    </div>
+
+    <div id="chart"></div>
+  </div>
+</section>
+   <!-- Latest Customers Section -->
+<section id="customers-section">
+  <h1>Latest Customers</h1>
+  <table class="customers-table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Customer</th>
+        <th>Total Spent</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>07 Sep</td>
+        <td>Fabiano Jorioz</td>
+        <td>$684.45</td>
+        <td><span class="status onboarded">Onboarded</span></td>
+      </tr>
+      <tr>
+        <td>07 Sep</td>
+        <td>Meggie Heinonen</td>
+        <td>$0.00</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>07 Sep</td>
+        <td>Sean Picott</td>
+        <td>$32.25</td>
+        <td><span class="status onboarded">Onboarded</span></td>
+      </tr>
+      <tr>
+        <td>04 Sep</td>
+        <td>Bell Covely</td>
+        <td>$0.00</td>
+        <td><span class="status onboarded">Onboarded</span></td>
+      </tr>
+      <tr>
+        <td>02 Sep</td>
+        <td>Giraud Lamlin</td>
+        <td>$125.70</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+    <!-- Orders Section -->
+    <section id="orders-section" style="display: none;">
+      <h1>Orders</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Status</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#1001</td>
+            <td>John Doe</td>
+            <td>Completed</td>
+            <td>$250</td>
+          </tr>
+          <tr>
+            <td>#1002</td>
+            <td>Jane Smith</td>
+            <td>Pending</td>
+            <td>$180</td>
+          </tr>
+          <tr>
+            <td>#1003</td>
+            <td>Ali Hassan</td>
+            <td>Shipped</td>
+            <td>$320</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+   
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+  <script >
+    // Handle navigation
+    const homeLink = document.getElementById("home-link");
+    const ordersLink = document.getElementById("orders-link");
+    const customersLink = document.getElementById("customers-link");
+
+    const homeSection = document.getElementById("home-section");
+    const ordersSection = document.getElementById("orders-section");
+    const customersSection = document.getElementById("customers-section");
+
+    function showSection(section) {
+      homeSection.style.display = "none";
+      ordersSection.style.display = "none";
+      customersSection.style.display = "none";
+      section.style.display = "block";
+    }
+
+    homeLink.addEventListener("click", () => showSection(homeSection));
+    ordersLink.addEventListener("click", () => showSection(ordersSection));
+    customersLink.addEventListener("click", () => showSection(customersSection));
+var options = {
+      chart: {
+        type: 'area',
+        height: 350
+      },
+      series: [{
+        name: 'Revenue',
+        data: [10, 40, 35, 50, 49, 60, 70, 91]
+      }],
+      xaxis: {
+        categories: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug']
+      }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+  </script>
+</body>
+</html>

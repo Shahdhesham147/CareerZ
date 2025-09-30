@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+body{
+  width: 100%;
+  /* min-height: 100vh;  */
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+  /* background-color: transparent; */
+  /* background: 
+  linear-gradient(rgba(4, 51, 116, 0.5), rgba(4, 51, 116, 1));  */
+  /* url("../img/638386035baa03f7b2132090383ea92d.jpg") center center / cover no-repeat; */
+}
+/* NAVBAR */
+.navbar{
+  z-index: 0;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.nav-back{
+  background-color: transparent;
+  transition: all 0.7s ease-in-out;
+}
+
+.back-default{
+  background-color: transparent;
+}
+.nav-link{
+    font-size: 18px;
+    font-weight: 500;
+    transition: ease-in-out 0.3s;
+}
+#BTN{
+    /* background-color: #b0e9fb; */
+    background-color: transparent;
+    width:50px;
+    height: 50px; 
+    font-size: 20px;
+    margin: 3;
+    /* border-radius: 50%; */
+    position: relative;
+    /* left: 550px; */
+    /* border-color: #b0e9fb; */
+    font-weight: bold;
+    border: none;
+    color: black;
+    transition: ease-in-out 0.3s;
+}
+#BTN:hover{
+    color: rgba(13, 70, 113, 1);
+/* transform: scale(1.1); */
+
+}
+.text_1{
+    font-size: 48px;
+   font-weight: bold;
+
+}
+
+.text_2{
+    font-size: 15px;
+    
+}
+
+.btn_home {
+  color: rgba(13, 70, 113, 1);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+  border: none; 
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: rgb(0, 0, 0, 0.5) 0px 4px 8px;
+}
+
+.btn_home i {
+  transition: transform 0.3s ease;
+  font-size: 14px;
+ color: white;
+ background-color: rgba(13, 70, 113, 1);
+ padding: 8px;
+ border: 1px solid rgba(13, 70, 113, 1);
+ border-radius: 8px;
+ width: fit-content;
+}
+
+.btn_home:hover {
+  background-color: hwb(206 5% 56%);
+  color: #fff;
+}
+
+.btn_home:hover i {
+  transform: translateX(5px);
+}
+
+.logo{
+    width: 80px;
+    height: 67px;
+  
+}
+
+.icon{
+   color: black;
+    /* position: relative; */
+    /* left: 150px; */
+    /* font-size: 14px; */
+    transition: ease-in-out 0.3s;
+}
+
+.icon:hover{
+color: rgba(13, 70, 113, 1);
+}
+
+
+#particles-js{ position:absolute; width: 100%; height: 100%; background-color: transparent; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+
+.Card{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 50px;
+    margin-top: 50px;
+    /* position: relative;
+    top: 200px;
+    margin-left: 100px; */
+}
+.card1,.card2,.card3{
+    background-color: transparent;
+    color: #000;
+    z-index: 1000;
+    width: 350px;
+    height: 250px;
+    border-radius: 30px;
+    border: 2px solid rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+/* justify-content: center; */
+  
+}
+.card1:hover .Btn,.card2:hover .Btn,.card3:hover .Btn{
+  background-color: #fff;
+    color: rgba(13, 70, 113, 1);
+  
+}
+.card1:hover,.card2:hover,.card3:hover {
+  background-color: rgba(180, 180, 180, 0.3);
+  color: #000;
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2); 
+}
+.txt{
+    font-weight: bold;
+    font-size: 30px;
+    color:rgb(0, 0, 0);
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+.Btn {
+  border: none;        
+  background-color: transparent;   
+  color: #000;                
+  font-weight: bold;
+  padding: 10px;          
+  border-radius: 12px;        
+  cursor: pointer;              
+  transition: 0.3s;
+  position: relative;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2); 
+  display: flex;
+  justify-self: center;
+  top: 35%;
+}
+/* .card1 .Btn:hover,.card2 .Btn:hover,.card3 .Btn:hover {
+  background-color: rgba(13, 70, 113, 1);
+  color: #fff;
+} */
+
+.Text {
+  /* position: relative;  
+  top: 150px;
+  margin-left: 500px;
+  z-index: 9999;         */
+  z-index: 1000;
+  text-align: center;
+  margin-top: 150px;
+  color: rgb(0, 0, 0);
+}
+.Sign{
+  color: rgba(0, 0, 0);
+  font-size: 20px;
+  text-align: center;
+    z-index: 1000;
+  /* position: relative;
+  top: 150px;
+  margin-left: 640px; */
+}
+.line{
+ /* position: relative;  
+ top: 160px;
+ margin-left: 370px;
+ z-index: 9999;         */
+ background-color:#000000 ;
+   z-index: 1000;
+ width: 600px;
+ height: 2px;
+ justify-self: center;
+ margin-top: 18px;
+ /* margin: 20px auto;  */
+}
+@media (max-width: 768px) {
+
+  .Text {
+    font-size: 28px;
+    margin-left: 0;
+    text-align: center;
+    position: relative;
+
+ 
+  }
+.Sign{
+    font-size: 15px;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 70px;
+
+}
+  .line {
+display: none; 
+    
+  }
+
+  .Card {
+    flex-direction: column;   
+    align-items: center;
+    gap: 30px;
+    margin-left: 0;
+    top: 180px;
+  }
+
+  .card1, .card2, .card3 {
+    width: 90%;  
+    height: auto;
+  }
+
+  .Btn {
+    left: 0;
+    margin: 20px auto;
+    display: block;
+    position: static;
+  }
+
+  .txt {
+    font-size: 24px;
+    top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Text {
+    font-size: 22px;
+    top: 200px;
+  }
+
+  .line {
+    width: 90%;
+    top: 200px;
+  }
+
+  .txt {
+    font-size: 20px;
+  }
+
+  .Btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}

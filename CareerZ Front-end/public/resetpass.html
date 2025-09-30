@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/resetpass.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <title>Reset password</title>
+</head>
+<body>
+    
+    <!-- particles.js container --> <div id="particles-js"></div> 
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+    <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+    <div class="container-fluid mx-5">
+    <a class="navbar-brand" href="#">
+      <img src="../src/img/newlogo.png" alt="" class="logo">
+    </a>
+      <button class="" id="BTN" type="button">AR</button>
+    </div>
+    </nav> 
+  
+  
+    <form><div class="container">
+    <h2>Reset password</h2>
+     <p>Password</p>
+    <input type="password" id="password" placeholder="Enter new password" required>
+    <p>Confirm password</p>
+    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+      <div class="btn reset">
+      <button type="submit" id="reset">Reset</button>
+    </div>
+</div>
+</form>
+<script>
+// reset password API
+document.addEventListener("DOMContentLoaded", ()=>{
+  const reset = document.getElementById('reset');
+  const passwordInput = document.getElementById('password')
+  const confirmPasswordInput = document.getElementById('confirmPassword');
+  
+  const email = localStorage.getItem('resetEmail');
+  if(!email){
+    alert('No email found. Please start the password reset process again.');
+    window.location.href = 'forgetpass.html';
+    return;
+  }
+  reset.addEventListener('click', async () => {
+    const password = passwordInput.value.trim();
+    const confirmPassword = confirmPasswordInput.value.trim()
+
+    if (!password|| !confirmPassword) {
+      alert('Please fill in all fields')
+      return
+    }
+
+    if (password !== confirmPassword) {
+      alert('Passwords do not match.');
+      return;
+    }
+
+    if (password.length < 6) {
+      alert('Password must be at least 6 characters long.');
+      return;
+    }
+
+    if (!/[a-z]/.test(password) || !/[A-Z]/.test(password) || !/[0-9]/.test(password)) {
+      alert('Password must contain at least one letter and one number.');
+      return;
+    }
+
+    try {
+      const response = await fetch('http://localhost:8888/reset-password',{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email,
+          password,
+          confirmPassword 
+        })
+      })
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert('Password has been reset successfully.');
+        window.location.href = 'login.html'; 
+      } else {
+        alert(data.message || 'Failed to reset password. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again later.');
+    }
+  })
+})
+
+  // زرار اللغة
+    const btn = document.getElementById("BTN");
+
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (btn.textContent.trim() === "AR") {
+      btn.textContent = "EN"; 
+      window.location.href = "resetpass_ar.html";
+    } else {
+      btn.textContent = "AR";
+      window.location.href = "resetpass.html";
+    }
+  });
+</script>
+<script src="../src/js/particles.js"></script>
+     <script src="../src/bootstarp/js/bootstrap.bundle.min.js"></script>
+     
+</body>
+</html>

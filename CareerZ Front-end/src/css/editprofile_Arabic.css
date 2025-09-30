@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+    /* NAVBAR */
+.logo{
+    width: 60px;
+    height: 70px;
+    margin-bottom: 20px;
+  
+}
+#navbar{
+  background-color: white;
+}
+.icon{
+    font-size: 25px;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); 
+}
+  
+.nav-back{
+    background-color: rgba(207, 238, 255);
+    transition: all 0.7s ease-in-out;
+ 
+}
+  
+.back-trans{
+    background-color: transparent;
+
+}
+.navbar-nav{
+position: relative;
+left: 400px;
+}
+#BTN{
+    background-color: #b0e9fb;
+    width:60px;
+    height: 50px; 
+    border-radius: 50%;
+    position: relative;
+    border-color: #b0e9fb;
+    font-weight: bold;
+    padding: 6px;
+
+}
+
+
+/* sign div */
+
+.sign{
+    position: relative;
+    top: 100px;
+}
+.All{
+     
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      margin-top: 120px;
+      
+}
+
+    #editprofileForm {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+      z-index: 1000;
+      /* visibility: hidden; */
+    }
+    #closeEdit{
+      float: right;
+      background-color: white;
+      color: black;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+    }
+    .profile-pic {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .profile-pic img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      object-fit: cover;
+      float: inline-start;
+      display: block;
+      margin: 0 10px 10px auto;
+  }
+     .preview img {
+      max-width: 120px;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .upload-btn {
+      background: #D9D9D9;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      display: block;
+      border-radius: 20px;
+      /* margin: 0 auto; */
+    }
+    #fileInfo{
+      color: rgb(0, 0, 0);
+      display: block;
+      background: transparent;
+      margin: auto;
+    }
+    .upload-btn:hover {
+      background: rgba(217, 217, 217, 0.95);
+    }
+
+     #doc{
+      background: transparent;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      margin: 0;
+     }
+     #doc:hover{
+      text-decoration: underline;
+     }
+
+     #profileForm{
+      margin-top: 45px;
+     }
+    .insert {
+      font-size: 14px;
+      background: #f4f4f4;
+      padding: 8px;
+      border-radius: 6px;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    h3{
+      margin: 10px 0;
+    }
+    .Btn {
+      display: block;
+      /* margin-top: 20px; */
+      margin: 20px auto 0 auto;
+      width: 50%;
+      padding: 10px;
+      background: #0D4671;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      /* justify-self: center; */
+    }
+    .btn:hover {
+      background: rgba(13, 70, 113, 0.95);
+    }
+    
+    /* media query  */
+    @media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+    .profile-pic img {
+        width: 70px;
+        height: 70px;
+    }
+    .btn {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start;
+        padding: 15px;
+    }
+    .container {
+        width: 100%;
+        height: auto;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 8px;
+        padding: 15px;
+    }
+    .profile-pic img {
+        width: 60px;
+        height: 60px;
+    }
+    .insert {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .btn {
+        width: 100%;
+        font-size: 14px;
+    }
+}

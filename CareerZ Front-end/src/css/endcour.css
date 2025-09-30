@@ -1,0 +1,148 @@
+ .boody {
+      font-family: "Poppins", Arial, sans-serif;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 40px 30px;
+      width: 450px;
+      height: auto;
+      max-width: 95%;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .image-container {
+      background-color: #082567;
+      border-radius: 50%;
+      width: 200px;
+      height: 130px;
+      margin: 0 auto 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-container img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+
+    .par {
+      font-family: Roboto;
+      font-weight: 400px;
+      font-size: 30px;
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+      padding-bottom: 20px;
+    }
+
+    .pro {
+      color: #555;
+      font-family: Roboto, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.6;
+      letter-spacing: 0.5px;
+    }
+
+    .para {
+      padding-bottom: 30px;
+    }
+
+    .buttona {
+      background-color: #0d2e72;
+      color: #fff;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+      margin-top: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .buttona:hover {
+      background-color: #1640a0;
+      transform: scale(1.05);
+    }
+
+    /* button animation when clicked */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.07); }
+      100% { transform: scale(1); }
+    }
+
+    button:focus {
+      outline: none;
+      animation: pulse 0.6s ease;
+    }
+
+    /* =================== RESPONSIVE =================== */
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+        padding: 25px 20px;
+      }
+
+      .image-container {
+        width: 150px;
+        height: 100px;
+      }
+
+      .par {
+        font-size: 24px;
+      }
+
+      .pro {
+        font-size: 14px;
+      }
+
+      .buttona {
+        font-size: 14px;
+        padding: 12px 22px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        width: 100%;
+        padding: 20px 15px;
+      }
+
+      .image-container {
+        width: 120px;
+        height: 90px;
+      }
+
+      .par {
+        font-size: 20px;
+      }
+
+      .pro {
+        font-size: 13px;
+      }
+
+      .buttona {
+        font-size: 13px;
+        padding: 10px 18px;
+      }
+    }

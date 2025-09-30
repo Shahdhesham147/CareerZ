@@ -1,0 +1,138 @@
+ .boody {
+      font-family: Arial, sans-serif;
+      background-color: #fff; /* أبيض */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      width: 400px;
+      max-width: 100%;
+      text-align: center;
+      border: 1px solid #e0e0e0; /* خط بسيط زي الصورة */
+      height: auto;
+    }
+
+    .image-container {
+      background-color: #082567;
+      border-radius: 50%;
+      width: 160px;
+      height: 120px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: yellow;
+      font-size: 50px;
+      margin-bottom: 50px;
+    }
+
+  .par {
+      margin: 10px 0;
+     font-family: Roboto;
+font-weight: 400px;
+font-style: Regular;
+font-size: 30px;
+
+line-height: 24px;
+letter-spacing: 0.5px;
+vertical-align: middle;
+
+      margin-bottom: 20px;
+    }
+
+    .pro {
+      margin: 10px 0 20px;
+      color: #555;
+      font-family: Roboto;
+
+font-style: Regular;
+
+
+line-height: 24px;
+letter-spacing: 0.5px;
+vertical-align: middle;
+
+    }
+
+    .buttony {
+      background-color: #0d2e72;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.3s;
+      margin-top: 50px;
+    }
+
+    button:hover {
+      background-color: #1640a0;
+    }
+
+    /* ================= MEDIA QUERIES ================= */
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+        padding: 20px;
+      }
+
+      .image-container {
+        width: 120px;
+        height: 100px;
+        font-size: 40px;
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+
+      button {
+        font-size: 13px;
+        padding: 10px 16px;
+        margin-top: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        width: 100%;
+        padding: 15px;
+      }
+
+      .image-container {
+        width: 100px;
+        height: 80px;
+        font-size: 32px;
+        margin-bottom: 25px;
+      }
+
+      h1 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      button {
+        font-size: 12px;
+        padding: 8px 14px;
+        margin-top: 20px;
+      }
+    }

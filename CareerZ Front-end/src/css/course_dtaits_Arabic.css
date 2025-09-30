@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.back-default{
+  background-color: #fff;
+}
+
+.logo{
+    width: 60px;
+    height: 70px;
+}
+
+.icon{
+    font-size: 25px;
+}
+
+#Btn{
+    background-color: #b0e9fb;
+    width:60px;
+    height: 50px; 
+    border-radius: 50%;
+    position: relative;
+    border-color: #b0e9fb;
+    font-weight: bold;
+}
+
+
+
+/* SEARCH NAV */
+.search_container{
+  form{
+    i{
+      cursor: pointer;
+    }
+  }
+}
+
+.search-box {
+  background: #f4f0f6;
+  border-radius: 30px;
+  padding: 0px 15px;
+  margin: 20px 0px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.search-box .fa {
+  color: #666;
+}
+
+.cart-icon {
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+
+
+/* HEADER */
+.course-header {
+  background:#003366; 
+  padding-bottom: 80px; 
+  padding-top: 100px ;
+}
+
+.course_title{
+
+  h2{
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  p{
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+.course-card {
+  background:#fff; 
+  padding: 0 30px; 
+  border-radius:30px; 
+}
+
+.stats span{
+  padding: 5px;
+  color:#002244;
+
+}
+
+.price span{
+  font-weight: 500;
+}
+
+.price button {
+  background: gold;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.price button:hover {
+  background:#ffe284;
+}
+
+
+
+
+
+/* OVERVIEW */
+.course_about{
+  background:rgba(239, 239, 239, 0.8); 
+
+}
+
+.tabs { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 2px 10px;
+  border-radius:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:none; 
+  cursor:pointer;
+  background:transparent; 
+  transition:all 0.3s ease-in-out;
+}
+
+.tab:hover {
+background:#B4B4B4;
+color: #fff;
+}
+
+.tab.active {
+  background:#B4B4B4; 
+  color:#fff;
+  
+}
+
+.tab-content {
+  background:#D9D9D961;
+  margin-top: 30px; 
+  padding:20px; 
+  border-radius:10px;
+  border: 1px solid #48484859;
+}
+
+.modules{
+
+  .row{
+  margin-top: 2px;
+  }
+}
+
+.module {
+  padding:10px; 
+
+  h4{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+}
+
+.preview {
+  float:right; 
+  color:#003366; 
+  cursor:pointer;
+  justify-content: start;
+}
+
+
+
+
+/* Learn section */
+.learn{
+  background:rgba(239, 239, 239, 0.8); 
+
+}
+
+.learn h2{
+  font-size: 50px;
+  margin-top: 100px;
+  font-weight: 400;
+}
+
+.learn_scroll {
+    display: flex;
+    overflow-x: scroll; /* Horizontal scroll for card */
+    gap: 20px; /* Space between cards */
+}
+
+.learn_card{
+  background-color: #ffff;
+  border-radius: 10px;
+  border: 1px solid #b1b1b1;
+  padding: 50px 10px 20px 10px;
+  width: 100%;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1); 
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  width: 350px;
+}
+
+.w-300{
+  width: 300px;
+}
+
+.learn_card:hover {
+  background:#f0f0f0;
+} 
+
+.learn_title{
+
+  p{
+    color: rgba(0,0,0,0.66);
+  }
+}
+
+
+
+/*RECOMMENDED*/
+.recommended {
+  background-color: #D9D9D9;
+
+  h3{
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
+
+.cards {
+  display:flex; 
+  overflow-x: scroll;
+  gap:20px; 
+
+}
+
+.rec-card {
+  background:#fff; 
+  padding:20px ; 
+  border-radius:10px;
+  text-align:center; 
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+
+  h4{
+    margin-top: 5px;
+    font-size: 27px;
+  }
+}
+
+.rec-card img {
+  width: 250px;
+  height: 210px;
+
+}
+
+.buy-btn {
+  display:block; 
+  margin-top:10px; 
+  padding:8px;
+  background:#003366; 
+  color:#fff;
+  border:none; 
+  border-radius:5px; 
+  cursor:pointer; 
+  transition:0.3s;
+}
+
+.buy-btn:hover {
+  background:#001a33;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/css/for company.css">
+  <title>Post an Opportunity</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Post an opportunity</h2>
+    <form>
+      <div class="form">
+        <div>
+          <label>Position Title</label>
+          <input type="text" required>
+        </div>
+        <div>
+          <label>Duration</label>
+          <input type="text" placeholder="Month" required>
+        </div>
+        <div>
+          <label>Salary</label>
+          <input type="text" placeholder="000L.E" required>
+        </div>
+      </div>
+
+      <div class="inf">
+        <p>Type</p>
+        <label><input type="radio" name="type"> Internship</label>
+        <label><input type="radio" name="type"> Job</label>
+      </div>
+
+      <div class="inf">
+        <p>Location</p>
+        <label><input type="radio" name="location" > On Site</label>
+        <label><input type="radio" name="location"> Remotely</label>
+        <label><input type="radio" name="location"> Hybrid</label>
+      </div>
+
+      <div class="des">
+      <p>Description</p>
+      <textarea></textarea>
+      </div>
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+</body>
+</html>

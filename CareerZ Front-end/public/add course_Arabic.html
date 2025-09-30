@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إضافة دورة</title>
+  <link rel="stylesheet" href="../src/css/all.min.css">
+  <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../src/css/add course.css">
+</head>
+<body class="boody">
+
+  <!-- شريط التنقل -->
+  <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+    <div class="container-fluid mx-5">
+      <a class="navbar-brand" href="#">
+        <img src="../src/img/New logo 1.png" alt="الشعار" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="تبديل القائمة">
+        <i class="fa-solid fa-bars fa-lg"></i>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item p-3"><a class="nav-link active" href="index_Arabic.html">الرئيسية</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="arabiccourses.html">الكورسات</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship_Arabic.html">التدريب</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">معلومات عنا</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">تواصل</a></li>
+        </ul>
+
+        <form class="d-flex">
+        <div class="dropdown">
+  <i class="fa-solid fa-circle-user Icon m-3 mx-5 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown" 
+     aria-expanded="false"
+     style="font-size: 30px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+    <li><a class="dropdown-item" href="profile.html">الملف الشخصي</a></li>
+    <li><a class="dropdown-item" href="All SignUp.html">إنشاء حساب</a></li>
+    <li><a class="dropdown-item" href="All login.html">تسجيل الدخول</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">تسجيل الخروج</a></li>
+  </ul>
+</div>
+
+          <button class="" id="BTN" type="button">EN</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener('scroll', function () {
+        var nav = document.getElementById('navbar')
+        if (window.scrollY > 5) {
+          nav.classList.add('nav-back')
+          nav.classList.remove('back-trans')
+        }
+        else {
+          nav.classList.remove('nav-back')
+          nav.classList.add('back-trans')
+        }
+      })
+    </script>
+  </nav>
+
+  <!-- محتوى الصفحة -->
+  <div class="All">
+    <div class="container">
+      <h2>إضافة دورة</h2>
+
+      <div class="form-row" id="courseForm">
+        <div class="form-group">
+          <label class="labell">العنوان</label>
+          <input type="text" class="inputo">
+        </div>
+
+        <div class="form-group">
+          <select class="selecto">
+            <option>عدد الدروس</option>
+            <option>5 دروس</option>
+            <option>10 دروس</option>
+            <option>20 درس</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <select class="selecto">
+            <option>المدة</option>
+            <option>شهر واحد</option>
+            <option>3 أشهر</option>
+            <option>6 أشهر</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <select class="selecto">
+            <option>المستوى</option>
+            <option>مبتدئ</option>
+            <option>متوسط</option>
+            <option>متقدم</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="labell">السعر</label>
+          <input type="text" class="inputo">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="labell">الوصف</label>
+        <textarea id="des" class="textareao"></textarea>
+      </div>
+
+      <!-- زر رفع الملفات -->
+      <label for="fileInput" class="attach-btn">📎 مرفق</label>
+      <input type="file" id="fileInput">
+
+      <button class="btn upload-btn" type="button" id="uploadBtn">رفع</button>
+    </div>
+
+    <script>
+      const fileInput = document.getElementById("fileInput");
+      const uploadBtn = document.getElementById("uploadBtn");
+
+      // عند الضغط على زر رفع الملف
+      uploadBtn.addEventListener("click", () => {
+        if (fileInput.files.length > 0) {
+          alert("✅ تم رفع الملف: " + fileInput.files[0].name);
+        } else {
+          alert("⚠️ الرجاء اختيار ملف أولاً");
+        }
+      });
+    </script>
+
+    <script>
+      document.getElementById("uploadBtn").addEventListener("click", function () {
+        alert("✅ تم بنجاح");
+      });
+    </script>
+  </div>
+
+<script>
+        const btn = document.getElementById("BTN");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "EN") {
+      btn.textContent = "EN"; 
+    window.location.href = "add course.html";
+
+    } else {
+      btn.textContent = "Arabic";
+ window.location.href = "add course_Arabic.html";
+
+    }
+  });
+</script>
+  <script src="../src/bootstarp/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

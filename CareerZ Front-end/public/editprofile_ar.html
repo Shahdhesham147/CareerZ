@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعديل</title>
+   <link rel="stylesheet" href="../src/css/editprofile_Arabic.css">
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+ <!-- NAV -->
+       <nav class="navbar back-default navbar-expand-md fixed-top pb-0" id="navbar">
+    <div class="container-fluid mx-5">
+       <form class="d-flex">
+     <button class="" id="BTN" type="button">EN</button>
+  <div class="dropdown">
+  <i class="fa-solid fa-circle-user icon m-3 mx-5 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown"               
+     aria-expanded="false"
+     style="font-size: 30px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+    <li><a class="dropdown-item" href="profile_Arabic.html"> حساب شخصي </a></li>
+    <li><a class="dropdown-item" href="All signUP_Arabic.html"> انشاء حساب </a></li>
+    <li><a class="dropdown-item" href="All login_Arabic.html">تسجيل دخول</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">تسجيل خروج</a></li>
+  </ul>
+</div>
+         
+        </form>
+  
+    
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fa-lg d-flex justify-content-center align-items-center my-3"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+           <li class="nav-item p-3"><a class="nav-link active" href="index_Arabic.html">الرئيسية</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="arabiccourses.html">الكورسات</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship_Arabic.html">التدريب</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">معلومات عنا</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">تواصل</a></li>
+        </ul>
+            <a class="navbar-brand" href="#">
+        <img src="../src/img/New logo 1.png" alt="" class="logo">
+      </a>
+       
+        
+      </div>
+    </div>    
+
+  </nav>
+       
+<!-- container  -->
+   <div class="All">
+<div id="editprofileForm">
+   <button onclick="openEdit()" id="closeEdit" style="float: left;"><i class="fa-solid fa-xmark fa-2xl"></i></button>
+  <div class="profile-pic">
+   <img src="../src/img/editop.png" id="profileImg" alt="صورة الملف الشخصي">
+   <br>
+   <input type="file" id="picInput" accept="image/*" hidden>
+   <button class="upload-btn" onclick="document.getElementById('picInput').click()" style="margin-left: 0%; margin-right: 100px;">تحميل</button>
+    <div class="preview" id="picPreview"></div>
+  </div>
+<!-- form -->
+  <form id="profileForm">
+      <div class="form-group">
+        <label>الاسم</label>
+        <input type="text" value="">
+      </div>
+      <div class="form-group">
+        <label>نبذة</label>
+        <textarea rows="3"></textarea>
+      </div>
+        <h3>معلومات التواصل</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>البريد الإلكتروني</label>
+          <input type="email" value="">
+        </div>
+        <div class="form-group">
+          <label>رقم الهاتف</label>
+          <input type="text" value="">
+        </div>
+      </div>
+        <div class="form-group">
+          <label>لينكدإن</label>
+          <input type="url" value=""></input>
+        </div>
+        <h3>المستندات</h3>
+      <div class="form-group">
+    <input type="file" id="fileInput" hidden>
+   <div class="insert">
+    <div class="file-info" id="fileInfo">لا يوجد ملف محدد</div>
+    <button type="button" class="upload-btn" id="doc" onclick="document.getElementById('fileInput').click()">اختر ملف</button>
+   </div>
+   <button type="submit" class="Btn">حفظ التغييرات</button> </a>
+
+</form>
+</div>
+
+
+<script>
+   const btn = document.getElementById("BTN");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "EN") {
+      btn.textContent = "EN"; 
+    window.location.href = "editprofile.html";
+
+    } else {
+      btn.textContent = "Arabic";
+ window.location.href = "editprofile.html";
+
+    }
+  });
+    // pic
+    let picInput = document.querySelector("#picInput");
+    let picPreview = document.querySelector("#picPreview");
+    const profileImg = document.querySelector("#profileImg");
+    const defaultImg = profileImg.src;
+    picInput.addEventListener("change", function () {
+      let file = picInput.files[0];
+      if (file) {
+       console.log("chosen pic:");
+        console.log(file.name);
+        console.log(file.size);
+        console.log(file.type);
+
+        let reader = new FileReader();
+        reader.onload = function (e) {
+          profileImg.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+// file
+    let fileInput = document.querySelector("#fileInput");
+    let fileInfo = document.querySelector("#fileInfo");
+    fileInput.addEventListener("change", function () {
+      let file = fileInput.files[0];
+      if (file) {
+        console.log("chosen file:");
+        console.log(file.name);
+        console.log(file.size);
+        console.log(file.type);
+        fileInfo.textContent = `📄 ${file.name} (${file.size} bytes, ${file.type})`;
+      }
+    });
+    // submit
+  document.getElementById("profileForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("تم حفظ التغييرات بنجاح!"); 
+  });
+  // pop up js code
+      function openEdit() {
+          const popEdit =
+              document.getElementById(
+                  "editprofileForm"
+              );
+          popEdit.style.visibility =
+              popEdit.style.visibility ===
+                  "visible"
+                  ? "hidden"
+                  : "visible";
+      }
+</script>
+</div>
+
+    <script src="../src/bootstarp/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

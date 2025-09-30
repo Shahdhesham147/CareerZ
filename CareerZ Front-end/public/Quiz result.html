@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz result</title>
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../src/css/Quiz result.css" />
+</head>
+<body>
+ <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+        <div class="container-fluid mx-5">
+          
+          <a class="navbar-brand" href="#">
+            <img src="../src/img/New logo 1.png" alt="" class="logoo">
+          </a>
+        
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fa-lg"></i>
+          </button>
+          
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+           <ul class="navbar-nav">
+          <li class="nav-item p-3"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="englishcourses.html">Courses</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship.html">Internship</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+            
+            <form class="d-flex">
+              <div class="dropdown">
+  <i class="fa-solid fa-circle-user icon m-3 mx-5 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown" 
+     aria-expanded="false"
+     style="font-size: 30px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+ <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+    <li><a class="dropdown-item" href="All SignUp.html"> sign up</a></li>
+    <li><a class="dropdown-item" href="All login.html">login</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">log out</a></li>
+  </ul>
+</div>
+
+          <button  id="BTN" type="button">Arabic</button>
+
+            </form>
+            
+          </div>
+        </div>
+        
+        <script>
+          window.addEventListener('scroll' , function(){
+            var nav = document.getElementById('navbar')
+            if(window.scrollY > 5){
+              nav.classList.add('nav-back')
+              nav.classList.remove('back-trans')
+            }
+            else{
+              nav.classList.remove('nav-back')
+              nav.classList.add('back-trans')
+            }
+          })
+        </script>    
+    
+      </nav>
+<div class="All">
+  <main class="card">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="logo">
+          <img src="../src/img/New logo 1.png" alt="Logo" />
+        </div>
+      </div>
+
+      <div class="title-wrap">
+        <h1 class="title">🎉 Your Result</h1>
+        <p class="subtitle">
+          Based on your answers, you are a great match for
+          <a href="#" class="link">UI/UX Design!</a>
+        </p>
+        <p class="muted">You have a creative mindset and a passion for design.</p>
+      </div>
+    </header>
+
+    <!-- Recommended course -->
+    <section class="recommended">
+      <h2 class="section-title">Recommended Course</h2>
+      <div class="course">
+        <div class="course-thumb">
+          <img src="../src/img/image 27.png" alt="UI/UX Design" />
+        </div>
+        <div class="course-info">
+          <h3 class="course-title">UI/UX Design</h3>
+          <div class="badge">Beginner</div>
+          <p class="course-desc">
+            Learn the principles of designing user interfaces, user experience, and prototyping.
+          </p>
+        <a href="englishcourses.html"> <button class="btn btn-primary" id="viewCourseBtn">View course</button></a> 
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="roadmap">
+      <h2 class="section-title">Your Learning Roadmap</h2>
+      <p class="muted center">
+        Follow a <span class="link">comprehensive</span> learning plan to reach your career.
+      </p>
+
+      <div class="progress-wrap">
+        <div class="progress-track">
+          <div class="progress-bar" id="progressBar" style="width: 30%;"></div>
+        </div>
+        <div class="progress-value" id="progressValue">30%</div>
+      </div>
+
+      <div class="grid">
+        <!-- Boxes -->
+        <div class="cols">
+          <article class="box">
+            <div class="box-head">
+              <h3>Foundation</h3>
+              <p class="muted">Learn the basics of the field</p>
+            </div>
+            <ul class="list">
+              <li>Intro to Design</li>
+              <li>UI Design Basics</li>
+            </ul>
+            <button class="btn btn-outline">Start</button>
+          </article>
+
+          <article class="box is-active">
+            <div class="box-head">
+              <h3>Tools &amp; Skills</h3>
+              <p class="muted">Learn the tools and skills</p>
+            </div>
+            <ul class="list">
+              <li>Figma Basics</li>
+              <li>Photoshop essentials</li>
+            </ul>
+            <button class="btn btn-outline">Start</button>
+          </article>
+
+          <article class="box">
+            <div class="box-head">
+              <h3>Portfolio</h3>
+              <p class="muted">Showcase your work and projects</p>
+            </div>
+            <ul class="list">
+              <li>Build 2 projects</li>
+              <li>Upload to Portfolio</li>
+            </ul>
+            <button class="btn btn-outline">Start</button>
+          </article>
+
+          <article class="box">
+            <div class="box-head">
+              <h3>Career Prep</h3>
+              <p class="muted">Prepare for the job market</p>
+            </div>
+            <ul class="list">
+              <li>CV Builder</li>
+              <li>LinkedIn optimizer</li>
+              <li>Interview simulation</li>
+            </ul>
+            <button class="btn btn-outline">Start</button>
+          </article>
+        </div>
+
+        <!-- Steps -->
+        <aside class="steps">
+          <h4 class="steps-title">Progress steps</h4>
+          <ol>
+            <li class="step current"><span class="dot">1</span><span>Foundations</span></li>
+            <li class="step"><span class="dot">2</span><span>Tools &amp; Skills</span></li>
+            <li class="step"><span class="dot">3</span><span>Portfolio</span></li>
+            <li class="step"><span class="dot">4</span><span>Career prep</span></li>
+          </ol>
+        <a href="#"> <button class="btn btn-cta" id="ctaBtn">
+            Complete Roadmap &amp; Get Job Opportunities
+          </button></a> 
+        </aside>
+      </div>
+    </section>
+  </main>
+  </div>
+
+
+  <script>
+     const btn = document.getElementById("BTN");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "Arabic") {
+      btn.textContent = "EN"; 
+window.location.href = "Quiz result_Arabic.html";
+    } else {
+      btn.textContent = "Arabic";
+    window.location.href = "Quiz result.html";
+    }
+  });
+  </script>
+   <script src="../src/bootstarp/js/bootstrap.bundle.min.js"></script>
+  <script src="../src/js/Quiz result.js"></script>
+</body>
+</html>

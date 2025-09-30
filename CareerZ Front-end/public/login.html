@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="../src/css/login.css">
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <!-- particles.js container --> <div id="particles-js"></div> 
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+  <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+    <div class="container-fluid mx-5">
+      <a class="navbar-brand" href="#">
+        <img src="../src/img/newlogo.png" alt="" class="logo">
+      </a>
+      <button class="" id="BTN" type="button">AR</button>
+      </div>
+  </nav>
+  <div class="Card">
+    <form id="loginForm">  
+    <h4 class="txt">Login</h4>
+      <div class="inp">
+          <label for="exampleInputEmail1" class="form-label">Email:</label>
+          <input type="email" class="form-control rounded-4" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="inp">
+          <label for="exampleInputPassword1" class="form-label">Password:</label>
+          <input type="password" class="form-control rounded-4" id="exampleInputPassword1">
+      </div>        
+      <div class="btn-submit text-center p-3">
+          <button type="submit" class="mt-4 btn_login" id="Login">Log in</button>
+      </div>
+      <p class="already">
+      Don't have an account? 
+        <a href="../public/All SignUp.html" id="signup" class="convertLogin">Sign up now!</a>
+      </p>
+      <p class="already">
+      Forgot password?
+      <a href="../public/forgetpass.html" id="forgotPass" class="convertLogin">Reset it</a>
+      </p>
+    </form>
+  </div>
+<script>
+// API
+document.getElementById("loginForm").addEventListener("submit",async (event) => {
+  event.preventDefault();
+
+  const email = document.getElementById("exampleInputEmail1").value;
+  const password = document.getElementById("exampleInputPassword1").value;
+
+  if (!email) {
+    alert("Email is required");
+    return;
+  }
+  if (!password){
+    alert("Password is required")
+    return;
+  }
+
+  try {
+    const res = await fetch ("http://localhost:8888/login",{
+      method: "POST",
+      headers: {"Content-Type" : "application/json"},
+      body : JSON.stringify({
+        email,
+        password
+      })
+    })
+
+    const data = await res.json();
+
+    if (res.ok) {
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user_id", data.user.id);
+      localStorage.setItem("role", data.user.role);
+
+      alert("Login successful")
+      window.location.href = "./quiz intro.html";
+    }else{
+      alert(data.error || data.message || "Login failed!")
+    }
+  } catch (error) {
+    console.error("Request failed:",error)
+    alert("⚠️ Server error, please try again later.");
+  }
+})
+
+  const btn = document.getElementById("BTN");
+    btn.addEventListener("click", function () {
+    if (btn.textContent === "AR") {
+      btn.textContent = "EN"; 
+      window.location.href = "login_Arabic.html";
+    } else {
+      btn.textContent = "AR";
+      window.location.href = "login.html";
+    }
+  });
+  // document.getElementById("Login").addEventListener("click", function(e) {
+  //   e.preventDefault();
+  //   window.location.href = "englishcourses.html"; 
+  // });
+
+  document.getElementById("signup").addEventListener("click", function(e) {
+    e.preventDefault(); 
+    window.location.href = "All SignUp.html"; 
+  });
+
+  document.getElementById("forgotPass").addEventListener("click", function(e) {
+    e.preventDefault();
+    window.location.href = "forgetpass.html"; 
+  });
+
+</script>
+<script src="../src/js/particles.js"></script>
+<script src="../src/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+</html>

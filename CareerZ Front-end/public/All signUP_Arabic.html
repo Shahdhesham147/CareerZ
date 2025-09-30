@@ -1,0 +1,134 @@
+<!-- <!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب</title>
+    <link rel="stylesheet" href="../src/css/All signUp_Arabic.css">
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+        <div class="container-fluid mx-5">
+          
+          <a class="navbar-brand" href="#">
+            <img src="../src/img/New logo 1.png" alt="" class="logo">
+          </a>
+        
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="تبديل القائمة">
+            <i class="fa-solid fa-bars fa-lg"></i>
+          </button>
+          
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                  <li class="nav-item p-3"><a class="nav-link active" href="index_Arabic.html">الرئيسية</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="arabiccourses.html">الكورسات</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship_Arabic.html">التدريب</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">معلومات عنا</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">تواصل</a></li>
+            </ul>
+            
+            <form class="d-flex">
+              <div class="dropdown">
+  <i class="fa-solid fa-circle-user Icon m-3 mx-5 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown" 
+     aria-expanded="false"
+     style="font-size: 30px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+    <li><a class="dropdown-item" href="profile.html">الملف الشخصي</a></li>
+    <li><a class="dropdown-item" href="All SignUp.html">إنشاء حساب</a></li>
+    <li><a class="dropdown-item" href="All login.html">تسجيل الدخول</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">تسجيل الخروج</a></li>
+  </ul>
+</div>
+
+   
+              <button id="Btn" type="button">EN</button>
+            </form>
+            
+          </div>
+        </div>
+        <script>
+          window.addEventListener('scroll' , function(){
+            var nav = document.getElementById('navbar')
+            if(window.scrollY > 5){
+              nav.classList.add('nav-back')
+              nav.classList.remove('back-trans')
+            }
+            else{
+              nav.classList.remove('nav-back')
+              nav.classList.add('back-trans')
+            }
+          })
+        </script>    
+    
+      </nav>
+
+ -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب</title>
+    <link rel="stylesheet" href="../src/css/All SignUp.css">
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <!-- particles.js container --> <div id="particles-js"></div> 
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+  <nav class="navbar back-trans navbar-expand-md fixed-top pb-0 flex-direction-row-reverse" id="navbar">
+    <div class="container-fluid mx-5">
+      <button class="" id="BTN" type="button">EN</button>  
+      <a class="navbar-brand" href="#">
+        <img src="../src/img/newlogo.png" alt="" class="logo">
+      </a>
+      </div>   
+
+  </nav>
+
+<h1 class="Text">اكتشف تعلم اربح</h1>
+<h4 class="Sign">إنشاء حساب</h4>
+<div class="line"></div>
+<div class="Card">
+    <div class="card1"> 
+        <p class="txt"> طالب  </p>
+ <button class="Btn" onclick="window.location.href='siginUp_Arbic.html'">  ابدأ الآن  </button>
+    </div>
+        <div class="card2">
+       <p class="txt">  معلم  </p>
+          <button class="Btn" onclick="window.location.href='signUp_mentor_Arabic.html'">  ابدأ الآن  </button>
+        </div>
+            <div class="card3">
+                 <p class="txt">  شركة  </p>
+                  <button class="Btn" onclick="window.location.href='signUp_company_Arabic.html'">  ابدأ الآن  </button>
+            </div>
+</div>
+
+<script>
+    const btn = document.getElementById("BTN");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "EN") {
+      btn.textContent = "AR"; 
+window.location.href = "All SignUp.html";
+    } else {
+      btn.textContent = "EN";
+    window.location.href = "All signUP_Arabic.html";
+    }
+  });
+
+
+</script>
+<script src="../src/js/particles.js"></script>
+<script src="../src/bootstarp/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

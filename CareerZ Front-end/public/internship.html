@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+
+
+           <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Css links -->
+  <link rel="stylesheet" href="../src/css/internship.css">
+  <link rel="stylesheet" href="../src/icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../src/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Internship</title>
+</head>
+<body>
+<!-- nav bar -->
+<nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+    <div class="container-fluid mx-5">
+      
+      <a class="navbar-brand" href="#">
+        <img src="../src/img/newlogo.png" alt="" class="logo">
+      </a>
+    
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fa-lg"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <ul class="navbar-nav justify-content-center align-items-center">
+          <li class="nav-item p-3"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="englishcourses.html">Courses</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship.html">Internship</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="aboutus.html">About Us</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="contactus.html">Contact</a></li>
+        </ul>
+      </div>
+        <form class="d-flex">
+       <!-- أيقونة يوزر مع dropdown -->
+<div class="dropdown">
+  <i class="fa-solid fa-user icon m-3 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown" 
+     aria-expanded="false"
+     style="font-size: 24px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+ <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+    <li><a class="dropdown-item" href="All SignUp.html"> sign up</a></li>
+    <li><a class="dropdown-item" href="All login.html">login</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">log out</a></li>
+  </ul>
+</div>
+                 </form>
+      <button class="" id="BTN" type="button">AR</button>
+      </div>
+    </div>
+    
+    <script>
+      window.addEventListener('scroll' , function(){
+        var nav = document.getElementById('navbar')
+        if(window.scrollY > 500){
+          nav.classList.add('nav-back')
+          nav.classList.remove('back-default')
+        }
+        else{
+          nav.classList.remove('nav-back')
+          nav.classList.add('back-default')
+        }
+      })
+    </script>    
+
+  </nav>
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Search + filters -->
+    <section class="search-area">
+      <div class="search-row">
+        <div class="search">
+           <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input id="q" type="search" placeholder="Search for an internship/job">
+        </div>
+        <div class="filters">
+          <button class="chip">Filter</button>
+          <button class="chip">All Categories</button>
+          <button class="chip">Location</button>
+          <button class="chip">Remote/On-site</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Title -->
+    <h2 class="section-title">Internship & Job Opportunities</h2>
+    <p class="sub-title">Build your career with internships, entry-level jobs, and powerful tools to showcase your skills.</p>
+
+    <!-- Tools grid -->
+    <section class="tools-grid">
+      <div class="tool">
+        <img src="../src/img/image 44.png" alt="LinkedIn">
+         <div class="tool-content">
+        <h3>LinkedIn Optimizer</h3>
+        <p>Improve your LinkedIn profile and stand out to recruiters.</p>
+        <button class="btn">Optimize Profile</button>
+         </div>
+      </div>
+      <div class="tool">
+        <img src="../src/img/image 45.png" alt="Interview Simulation">
+         <div class="tool-content">
+        <h3>Interview Simulation</h3>
+        <p>Practice mock interviews and get AI-driven feedback.</p>
+        <button class="btn">Start Simulation</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="../src/img/image 46.png" alt="Portfolio Builder">
+         <div class="tool-content">
+        <h3>Portfolio Builder</h3>
+        <p>Create an impressive online portfolio with projects and achievements.</p>
+        <button class="btn">Build Portfolio</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="../src/img/image 48.png" alt="Project & File Uploader">
+         <div class="tool-content">
+        <h3>Project & File Uploader</h3>
+        <p>Easily upload and showcase your projects.</p>
+        <button class="btn">Upload Now</button>
+         </div>
+      </div>
+      <div class="tool">
+        <img src="../src/img/image 49.png" alt="Personal Online Portfolio">
+         <div class="tool-content">
+        <h3>Personal Online Portfolio</h3>
+        <p>Each user gets a personalized online portfolio page.</p>
+        <button class="btn">View Portfolio</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="../src/img/image 47.png" alt="Job & Internship Opportunities">
+         <div class="tool-content">
+        <h3>Job & Internship Opportunities</h3>
+        <p>Access curated job and internship postings.</p>
+        <div id="popupContainer">
+          <button class="btn" onclick="openInt()">Find Internship</button>
+        </div>
+      </div>
+      </div>
+
+    <div id="popupDialog">
+      <div class="internships">
+  <div class="card" onclick="window.location.href='course_dtaits.html'">
+      <img src="../src/img/img1.png" alt="UI/UX Design">
+      <h3>UI/UX Design</h3>
+      <p>Beginner</p>
+  </div>
+
+  <div class="card" onclick="window.location.href='course_dtaits.html'">
+      <img src="../src/img/img2.png" alt="Graphic Design">
+      <h3>Graphic Design</h3>
+      <p>Beginner</p>
+      
+  </div>
+
+  <div class="card" onclick="window.location.href='course_dtaits.html'">
+      <img src="../src/img/img3.png" alt="Python Programming">
+      <h3>Python Programming</h3>
+      <p>Beginner</p>
+      
+  </div>
+
+  <div class="card" onclick="window.location.href='course_dtaits.html'">
+      <img src="../src/img/img4.png" alt="Digital Marketing">
+      <h3>Digital Marketing</h3>
+      <p>Beginner</p>
+  </div>
+
+  <div class="card" onclick="window.location.href='course_dtaits.html'">
+      <img src="../src/img/img5.png" alt="Full-stack Web Developer">
+      <h3>Full-stack Web Developer</h3>
+      <p>Beginner</p>
+  </div>
+
+  <div class="card" onclick="window.location.href='course_dtaits.html'">
+      <img src="../src/img/img6.png" alt="Data Science">
+      <h3>Data science</h3>
+      <p>Beginner</p>
+  </div>
+</div>
+</div>
+    </section>
+      <script>
+      function openInt() {
+          const popDialog =
+              document.getElementById(
+                  "popupDialog"
+              );
+          popDialog.style.visibility =
+              popDialog.style.visibility ===
+                  "visible"
+                  ? "hidden"
+                  : "visible";
+      }   
+  </script>
+</main>
+    <!-- Featured Jobs -->
+     <div class="featured-section">
+     <div class="featured-inner">
+
+    <h2 class="section-title">Featured Internships / Jobs</h2>
+<section class="jobs-grid">
+  <div class="job">
+    <img src="../src/img/image 50.png" alt="">
+    <h3>Full-Stack Web Developer</h3>
+    <p class="company">StartupX</p>
+    
+    <div class="details">
+      <span><i class="fa-solid fa-location-dot"></i> Cairo</span>
+      <span><i class="fa-solid fa-calendar-days"></i> 6 months</span>
+    </div>
+    
+    <div class="job-footer">
+      <button class="btn">Apply</button>
+      <div class="applicants">
+        <i class="fa-solid fa-users"></i> 50 Applicants
+      </div>
+    </div>
+  </div>
+
+  <div class="job">
+    <img src="../src/img/image 52.png" alt="">
+    <h3>Digital Marketing Intern</h3>
+    <p class="company">TechSolutions</p>
+    
+    <div class="details">
+      <span><i class="fa-solid fa-location-dot"></i> Cairo</span>
+      <span><i class="fa-solid fa-calendar-days"></i> 3 months</span>
+    </div>
+    
+    <div class="job-footer">
+      <button class="btn">Apply</button>
+      <div class="applicants">
+        <i class="fa-solid fa-users"></i> 50 Applicants
+      </div>
+    </div>
+  </div>
+
+  <div class="job">
+    <img src="../src/img/image 54.png" alt="">
+    <h3>UI/UX Designer</h3>
+    <p class="company">AppWorks</p>
+    
+    <div class="details">
+      <span><i class="fa-solid fa-location-dot"></i> Cairo</span>
+      <span><i class="fa-solid fa-calendar-days"></i> 3 months</span>
+    </div>
+    
+    <div class="job-footer">
+      <button class="btn">Apply</button>
+      <div class="applicants">
+        <i class="fa-solid fa-users"></i> 50 Applicants
+      </div>
+    </div>
+  </div>
+</section>
+ </div>
+</div>
+  
+<script>
+ const btn = document.getElementById("BTN");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "AR") {
+      btn.textContent = "EN"; 
+       window.location.href = "internship_Arabic.html";
+      
+    } else {
+      btn.textContent = "AR";
+   window.location.href = "internship.html";
+    }
+  });
+</script> 
+<div class="circles">
+<button id="backToTop" style="right: 2px; left: auto;" onclick="window.scrollTo(top=0, behavior='smooth')">
+  <i class="fa-solid fa-circle-up"></i></button>
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-758ab3b5-0a35-408f-83f5-f16ccba75122" data-elfsight-app-lazy id="Chatbot"></div>
+  <script>
+   const backToTop = document.getElementById("backToTop");
+
+    // Show button when scrolling down
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    };
+</script>
+</div>
+<script src="../src/js/bootstrap.bundle.min.js"></script>
+<script src="../src/js/main.js"></script>
+</body>
+</html>

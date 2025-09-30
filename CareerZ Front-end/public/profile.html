@@ -1,0 +1,264 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+             <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Css links -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/profile.css">
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <title>User profile</title>
+</head>
+<body>
+  <!-- Home + Nav  -->
+  <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+    <div class="container-fluid mx-5">
+      
+      <a class="navbar-brand" href="#">
+        <img src="../src/img/newlogo.png" alt="" class="logo">
+      </a>
+    
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fa-lg"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <ul class="navbar-nav justify-content-center align-items-center">
+          <li class="nav-item p-3"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="englishcourses.html">Courses</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship.html">Internship</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="aboutus.html">About Us</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="contactus.html">Contact</a></li>
+        </ul>
+      </div>
+        <form class="d-flex">
+       <!-- أيقونة يوزر مع dropdown -->
+<div class="dropdown">
+  <i class="fa-solid fa-user icon m-3 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown" 
+     aria-expanded="false"
+     style="font-size: 24px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+ <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+    <li><a class="dropdown-item" href="All SignUp.html"> sign up</a></li>
+    <li><a class="dropdown-item" href="All login.html">login</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">log out</a></li>
+  </ul>
+</div>
+                 </form>
+      <button class="" id="BTN" type="button">AR</button>
+      </div>
+    </div>
+    
+    <script>
+      window.addEventListener('scroll' , function(){
+        var nav = document.getElementById('navbar')
+        if(window.scrollY > 500){
+          nav.classList.add('nav-back')
+          nav.classList.remove('back-default')
+        }
+        else{
+          nav.classList.remove('nav-back')
+          nav.classList.add('back-default')
+        }
+      })
+    </script>    
+
+  </nav>
+    <div class="container">
+
+    <div class="left-col">
+    <div class="instructor">
+        <img src="../src/img/7300408bdf9aba66343baa79fc89651f 1.png" alt="user">
+        <h2>Nour Ahmed Samir</h2>
+        <p>Fine Arts student</p>
+        <button onclick="openEdit()">Edit profile</button>
+    </div>
+
+    <div class="about">
+        <h2>About me</h2>
+        <p>I am a Fine Arts student trying to improve my skills xxxxx x xx xx xx x xxxxx xxx xx xxxx xxxxxxx xxxx xxxxxx xxxx</p>
+        <span>Online Education</span>
+    </div>
+
+    <div class="contact">
+        <p>Phone number:</p>
+        <i class="fa-solid fa-phone"style="color: #0077cc;" ></i>01xxxxx0xx
+        <p>Email:</p>
+        <i class="fa-solid fa-envelope" style="color: #0077cc;"></i><a href="">Email: nourxxx@gmail.com</a>
+        <p>Linkedin</p>
+        <i class="fa-brands fa-linkedin" style="color: #0077cc;"></i><a href="">https://www.linkedin.com/in/nourahmed-72801b251</a>
+    </div>
+   </div>
+
+   <div class="right-col">
+    <div class="inter">
+    <h2>Internships:</h2>
+    <div class="inter-row">
+     <div class="inter-detail">Linkedin optimizer</div>
+     <div class="inter-lessons">3 month</div>
+     <div class="inter-inf">Ongoing</div>
+     <div class="inter-img"><img src="../src/img/image 44.png" alt="linkedin"></div>
+    </div>
+
+</div>
+
+  
+    <div class="courses">
+          <h2>Courses:</h2>
+          <div class="course-item">
+         <div class="course-row">
+            <div class="course-detail">Python</div>
+            <div class="course-lessons">8 lesson/1 month</div>
+            <div class="course-level">For beginner</div>
+            <div class="course-inf">Ongiong</div>
+         </div>
+            <div class="progress">
+             <div class="progress-bar" style="width: 80%;background-color: blue;"></div>
+            </div>
+            <div class="progress-percentage">80%</div>
+          </div>
+          <div class="course-item">
+             <div class="course-row">
+            <div class="course-detail">UI\UX</div>
+            <div class="course-lessons">12 lesson/1.5 month</div>
+            <div class="course-level">intermediate</div>
+            <div class="course-inf">Finished</div>
+        </div>
+            <div class="progress">
+            <div class="progress-bar" style="width: 100%;background-color: blue;"></div>
+            </div>
+            <div class="progress-percentage">100%</div>
+        </div>
+        </div>
+       
+          </div>
+</div>
+</div>
+<div class="All">
+<div id="editprofileForm">
+   <!-- <button onclick="openEdit()" id="closeEdit"><i class="fa-solid fa-xmark fa-2xl"></i></button> -->
+    <button onclick="window.location.href='profile.html'" id="closeEdit"><i class="fa-solid fa-xmark fa-2xl"></i></button>
+  <div class="profile-pic">
+   <img src="../src/img/editop.png" id="profileImg" alt="profile">
+   <br>
+   <input type="file" id="picInput" accept="image/*" hidden>
+   <button class="upload-btn" onclick="document.getElementById('picInput').click()">Upload</button>
+    <div class="preview" id="picPreview"></div>
+  </div>
+<!-- form -->
+  <form id="profileForm">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" value="">
+      </div>
+      <div class="form-group">
+        <label>Bio</label>
+        <textarea rows="3"></textarea>
+      </div>
+        <h3>Contact Info</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" value="">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="text" value="">
+        </div>
+      </div>
+        <div class="form-group">
+          <label>Linkedin</label>
+          <input type="url" value=""></input>
+        </div>
+        <h3>Documents</h3>
+      <div class="form-group">
+    <input type="file" id="fileInput" hidden>
+   <div class="insert">
+    <div class="file-info" id="fileInfo">No file selected</div>
+    <button type="button" class="upload-btn" id="doc" onclick="document.getElementById('fileInput').click()">Choose File</button>
+   </div></div>
+   <!-- <a href="profile.html"><button type="button" class="Btn">Save Changes</button></a> -->
+    <button type="button" class="Btn" onclick="window.location.href='profile.html'">Save Changes</button>
+<script>
+  // pic 
+    let picInput = document.querySelector("#picInput");
+    let picPreview = document.querySelector("#picPreview");
+    const profileImg = document.querySelector("#profileImg");
+    const defaultImg = profileImg.src;
+    picInput.addEventListener("change", function () {
+      let file = picInput.files[0];
+      if (file) {
+       console.log("chosen pic:");
+        console.log(file.name);
+        console.log(file.size);
+        console.log(file.type);
+
+        let reader = new FileReader();
+        reader.onload = function (e) {
+          profileImg.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+// file 
+    let fileInput = document.querySelector("#fileInput");
+    let fileInfo = document.querySelector("#fileInfo");
+    fileInput.addEventListener("change", function () {
+      let file = fileInput.files[0];
+      if (file) {
+        console.log("chosen file:");
+        console.log(file.name);
+        console.log(file.size);
+        console.log(file.type);
+        fileInfo.textContent = `📄 ${file.name} (${file.size} bytes, ${file.type})`;
+      }
+    });
+// submit 
+  document.getElementById("editprofileForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Changes Saved Successfully!"); 
+  });
+// pop up js code
+      function openEdit() {
+          const popEdit =
+              document.getElementById(
+                  "editprofileForm"
+              );
+          popEdit.style.visibility =
+              popEdit.style.visibility ===
+                  "visible"
+                  ? "hidden"
+                  : "visible";
+      }
+      
+  </script>
+  </form>
+</div>
+</div>
+<script>
+   const btn = document.getElementById("BTN");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "AR") {
+      btn.textContent = "EN"; 
+       window.location.href = "profile_Arabic.html";
+      
+
+    } else {
+      btn.textContent = "AR";
+   window.location.href = "profile.html";
+    }
+  });
+</script>
+<script src="../src/js/bootstrap.bundle.min.js"></script>
+<script src="../src/js/main.js"></script>
+</body>
+</html>

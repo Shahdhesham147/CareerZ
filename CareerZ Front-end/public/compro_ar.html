@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الملف التعريفي للشركة</title>
+  <link rel="stylesheet" href="../src/css/comp.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo-section">
+        <div class="logo-box">شعار</div>
+        <div class="company-name">شركة ABC</div>
+      </div>
+      <img src="../src/img/hola.png" alt="صورة الشركة">
+    </div>
+
+    <!-- Description -->
+    <div class="description">وصف الشركة</div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="active">تدريبات</button>
+      <button class="diva">وظائف</button>
+    </div>
+
+    <!-- Jobs -->
+    <div class="jobs">
+      <div class="job-card">
+        <div class="job-info">
+          <div class="calendar"><img src="../src/img/eggo.png" width="80px"></div>
+          <div class="job-details">
+            أخصائي تكنولوجيا المعلومات
+            <span>١٤ فبراير - ٣١ مايو</span>
+          </div>
+        </div>
+        <button class="apply-btn">قدّم</button>
+      </div>
+
+      <div class="job-card">
+        <div class="job-info">
+          <div class="calendar"><img src="../src/img/Group.png" width="80px"></div>
+          <div class="job-details">
+            أخصائي تكنولوجيا المعلومات
+            <span>٢٨ فبراير - ١٥ يونيو</span>
+          </div>
+        </div>
+        <button class="apply-btn">قدّم</button>
+      </div>
+
+      <div class="job-card">
+        <div class="job-info">
+          <div class="calendar"><img src="../src/img/Vector.png" width="80px"></div>
+          <div class="job-details">
+            أخصائي UI/UX
+            <span>١٤ فبراير - ٣١ مايو</span>
+          </div>
+        </div>
+        <button class="apply-btn">قدّم</button>
+      </div>
+
+      <div class="job-card">
+        <div class="job-info">
+          <div class="calendar"><img src="../src/img/Group.png" width="80px"></div>
+          <div class="job-details">
+            محاسب
+            <span>١٤ فبراير - ٣١ مايو</span>
+          </div>
+        </div>
+        <button class="apply-btn">قدّم</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div><img src="../src/img/gamil.png" width="20px"> البريد الإلكتروني: abcco@gmail.com</div>
+      <div><img src="../src/img/hotline.png" width="20px"> الخط الساخن: 19920</div>
+    </div>
+  </div>
+  <script>const container = document.querySelector('.container');
+
+container.addEventListener('mouseenter', () => {
+  container.style.transform = 'scale(1.02)';
+  container.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
+});
+
+container.addEventListener('mouseleave', () => {
+  container.style.transform = 'scale(1)';
+  container.style.boxShadow = 'none';
+});
+</script>
+
+</body>
+</html>

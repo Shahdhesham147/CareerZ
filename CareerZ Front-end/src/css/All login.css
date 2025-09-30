@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+body{
+  width: 100%;
+  min-height: 100vh; 
+  background-size: cover;
+  background-position: center;
+  background: 
+  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  
+  url("../img/638386035baa03f7b2132090383ea92d.jpg") center center / cover no-repeat;
+
+
+}
+/* NAVBAR */
+.logo{
+    width: 60px;
+    height: 70px;
+  
+}
+
+.icon{
+    font-size: 25px;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); 
+}
+  
+.nav-back{
+    background-color: rgba(207, 238, 255);
+    transition: all 0.7s ease-in-out;
+    
+}
+  
+.back-trans{
+    background-color: transparent;
+
+}
+
+#Btn{
+    background-color: #b0e9fb;
+    width:60px;
+    height: 50px; 
+    border-radius: 50%;
+    position: relative;
+    border-color: #b0e9fb;
+    font-weight:bold;
+}
+#navbar {
+  background-color: white; 
+
+}
+
+.Card{
+    display: flex;
+    gap: 50px;
+    position: relative;
+    top: 200px;
+    margin-left: 100px;
+}
+.card1,.card2,.card3{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    width: 350px;
+    height: 250px;
+    border-radius: 30px;
+    border: 5px solid #b0e9fb ;
+    transition: all 0.3s ease-in-out;
+  
+}
+.card1:hover,.card2:hover,.card3:hover {
+  background-color: #7fdcf4;
+  color: #fff;
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2); 
+}
+.txt{
+    font-weight: bold;
+    font-size: 30px;
+    color:white;
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+.Btn {
+  z-index: 9999;
+  border-color: #b0e9fb;        
+  background-color: #b0e9fb;   
+  color: #000;                
+  font-weight: bold;
+  padding: 10px 40px;          
+  border-radius: 25px;        
+  cursor: pointer;              
+  transition: 0.3s;
+  position: relative;
+  margin-left: 105px;
+  top: 20px;
+
+}
+.Btn:hover {
+  color: #7fdcf4;
+  background-color: #fff;
+  border-color:#fff ;
+
+}
+
+.Text {
+  position: relative;  
+  top: 150px;
+  margin-left: 500px;
+  z-index: 9999;        
+  color: white;
+}
+.Sign{
+  color: #fff;
+  font-size: 20px;
+  position: relative;
+  top: 150px;
+  margin-left: 640px;
+}
+.line{
+ position: relative;  
+ top: 160px;
+ margin-left: 370px;
+ z-index: 9999;        
+ background-color:#b0e9fb ;
+ width: 600px;
+ height: 4px;
+ margin: 20px auto; 
+}
+@media (max-width: 768px) {
+
+  .Text {
+    font-size: 28px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .line {
+display: none; 
+    
+  }
+
+  .Card {
+    flex-direction: column;   
+    align-items: center;
+    gap: 30px;
+    margin-left: 0;
+    top: 240px;
+  }
+
+  .card1, .card2, .card3 {
+    width: 90%;  
+    height: auto;
+  }
+
+  .Btn {
+    left: 0;
+    margin: 20px auto;
+    display: block;
+    position: static;
+  }
+
+  .txt {
+    font-size: 24px;
+    top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Text {
+    font-size: 22px;
+    top: 200px;
+  }
+
+  .line {
+    width: 90%;
+    top: 200px;
+  }
+
+  .txt {
+    font-size: 20px;
+  }
+
+  .Btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}

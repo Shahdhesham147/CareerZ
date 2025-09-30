@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+
+    <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Css links -->
+  <link rel="stylesheet" href="../src/icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../src/css/style.css">
+  <link rel="stylesheet" href="../src/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كارير زِد</title>
+</head>
+<body mt-5>
+    
+  <!-- الرئيسية + النافبار -->
+  <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+    <div class="container-fluid mx-5">
+      
+      <a class="navbar-brand" href="#">
+        <img src="../src/img/New logo 1.png" alt="" class="logo">
+      </a>
+    
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="تبديل القائمة">
+        <i class="fa-solid fa-bars fa-lg"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item p-3"><a class="nav-link active" href="index_Arabic.html">الرئيسية</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="arabiccourses.html">الكورسات</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship_Arabic.html">التدريب</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">معلومات عنا</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">تواصل</a></li>
+        </ul>
+        
+        <form class="d-flex">
+          <div class="dropdown">
+  <i class="fa-solid fa-circle-user icon m-3 mx-5 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown"               
+     aria-expanded="false"
+     style="font-size: 30px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+    <li><a class="dropdown-item" href="profile_Arabic.html"> حساب شخصي </a></li>
+    <li><a class="dropdown-item" href="All signUP_Arabic.html"> انشاء حساب </a></li>
+    <li><a class="dropdown-item" href="All login_Arabic.html">تسجيل دخول</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">تسجيل خروج</a></li>
+  </ul>
+</div>
+
+             <button class="" id="BTN" type="button">EN</button>
+        </form>
+        
+      </div>
+    </div>
+    
+    <script>
+      window.addEventListener('scroll' , function(){
+        var nav = document.getElementById('navbar')
+        if(window.scrollY > 500){
+          nav.classList.add('nav-back')
+          nav.classList.remove('back-default')
+        }
+        else{
+          nav.classList.remove('nav-back')
+          nav.classList.add('back-default')
+        }
+      })
+    </script>    
+
+  </nav>
+    
+  <section id="home" class="home pt-5">
+    <div class="container_Home ms-5 mt-5">
+      <div class="">
+        <div class="home_text pb-4">
+          <p class="text_1">اكتشف شغفك <br> 
+            وابدأ رحلتك <br>
+            إلى سوق العمل
+          </p>
+          <p class="text_2">اكتشف إمكانياتك مع منصتنا التعليمية الشاملة—
+            <br> صُممت لتلهمك وتطورك 
+            وتجهزك بالمهارات والمعرفة <br>
+            المطلوبة للنجاح في عالم متغير باستمرار.
+          </p>
+         <a href="All signUP_Arabic.html"><button class="btn_home my-5 "> ابدأ الآن <img src="../src/img/iconoir_arrow-up-right.png" alt="" class="img_btn"></button></a> 
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- المنصة -->
+  <div class="container platform_container mt-5">
+    <div class=" platform_Title">
+      <h1>كيف تعمل المنصة</h1>
+    </div>
+    
+    <div class="row row-cols-1 row-cols-md-5 g-4 mt-5">
+      
+      <div class="col">
+        <div class="text-center platform_block">
+          <div class="platform_icon">
+            <i class="bi bi-search"></i>
+          </div>
+          <div class="card_popup">
+            <p>
+              من خلال تقييم ذكي، نساعد الطلاب والخريجين على اكتشاف المجالات التي تتناسب مع اهتماماتهم وقوتهم وطموحاتهم المستقبلية، ونكشف عن شغفهم الحقيقي وقدراتهم. 
+            </p>
+          </div>
+          <h5 class="card-title">اكتشف مسارك</h5>
+        </div>
+      </div>
+      
+      <div class="col">
+        <div class="text-center platform_block">
+          <div class="platform_icon">
+            <img src="../src/img/image 7.png" alt="">
+          </div>
+          <div class="card_popup">
+            <p>
+              من خلال تقييم ذكي، نساعد الطلاب والخريجين على اكتشاف المجالات التي تتناسب مع اهتماماتهم وقوتهم وطموحاتهم المستقبلية، ونكشف عن شغفهم الحقيقي وقدراتهم. 
+            </p>
+          </div>
+          <h5 class="card-title">اكتشف مسارك</h5>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="text-center platform_block">
+          <div class="platform_icon">
+            <img src="../src/img/image 6.png" alt="">
+          </div>
+          <div class="card_popup">
+            <p>
+              من خلال تقييم ذكي، نساعد الطلاب والخريجين على اكتشاف المجالات التي تتناسب مع اهتماماتهم وقوتهم وطموحاتهم المستقبلية، ونكشف عن شغفهم الحقيقي وقدراتهم. 
+            </p>
+          </div>
+          <h5 class="card-title">اكتشف مسارك</h5>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="text-center platform_block">
+          <div class="platform_icon">
+            <img src="../src/img/image 8.png" alt="">
+          </div>
+          <div class="card_popup">
+            <p>
+              من خلال تقييم ذكي، نساعد الطلاب والخريجين على اكتشاف المجالات التي تتناسب مع اهتماماتهم وقوتهم وطموحاتهم المستقبلية، ونكشف عن شغفهم الحقيقي وقدراتهم. 
+            </p>
+          </div>
+          <h5 class="card-title">اكتشف مسارك</h5>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="text-center platform_block">
+          <div class="platform_icon">
+            <img src="../src/img/image 9.png" alt="">
+          </div>
+          <div class="card_popup">
+            <p>
+              من خلال تقييم ذكي، نساعد الطلاب والخريجين على اكتشاف المجالات التي تتناسب مع اهتماماتهم وقوتهم وطموحاتهم المستقبلية، ونكشف عن شغفهم الحقيقي وقدراتهم. 
+            </p>
+          </div>
+          <h5 class="card-title">اكتشف مسارك</h5>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+
+<!-- الكورسات -->
+<section id="courses">
+  <div class="Top_Rate_Course">
+    <div class=" container mt-5 py-5">
+      <div class="stats row row-cols-sm-1 row-cols-md-3 gy-3 ms-5">
+        
+        <div class="col">
+          <div class="subjects card">
+            <span class="mt-4"> تعليم </span>
+            <p>مواد</p>
+            <p class="num">+40</p>
+          </div>
+        </div>
+      
+        <div class="col">
+          <div class="courses card">
+            <span class="mt-4"> عبر الإنترنت </span>
+            <p>كورسات</p>
+            <p class="num ">+120</p>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="reviews card">
+            <span class="mt-4">
+              <div class="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="rating">&nbsp;&nbsp;5.0</p>
+            </span>
+            <p>مراجعات المتعلمين</p>
+            <p class="num">+180k</p>
+          </div>
+        </div>
+      </div> 
+    </div> 
+  </div>
+</section>
+
+
+<!-- التدريب -->
+<section id="internship">
+  <div class=" Popular_Courses container mt-4">
+    <div class="row">
+      <h2>أشهر الكورسات</h2>
+      <div class="coursesss row ">
+        
+        <button class="course-card active col-sm-6 col-md-3">
+          <img src="../src/img/image 12.png" alt="UI">
+          <p>أساسيات<br> تصميم الواجهة</p>
+        </button>
+        
+        <button class="course-card col-sm-6 col-md-3">
+          <img src="../src/img/image 13.png" alt="Marketing">
+          <p>التسويق<br> للأعمال</p>
+        </button>
+
+        <button class="course-card col-sm-6 col-md-3">
+          <img src="../src/img/image 14.png" alt="Web Dev">
+          <p>تطوير<br> المواقع</p>
+        </button>
+
+        <button class="course-card col-sm-6 col-md-3 ">
+          <img src="../src/img/image 15.png" alt="Programming">
+          <p>برمجة</p>
+        </button>
+      
+      </div>
+      
+      <div class="why">
+        <p><b>مُخصص للطلاب والشباب:</b> منصتنا مصممة لمساعدة المراهقين وطلاب الجامعة في استكشاف شغفهم واكتشاف قدراتهم وفتح مسارات مهنية مناسبة لهم.</p>
+        <p><b>تعلم من خبراء حقيقيين:</b> توجيه من محترفين في المجال لتكتسب خبرات عملية وليست مجرد نظريات.</p>
+        <p><b>مهارات تفتح الأبواب:</b> من التواصل وحل المشكلات إلى المهارات الرقمية والمهنية — كل وحدة مصممة لتأهيلك للفرص الواقعية.</p>
+        <p><em>نمو شخصي بطريقتك:</em> تعلم مرن ومُخصص ليتماشى مع سرعتك واهتماماتك وأحلامك.</p>
+      </div>
+      
+      <div class="Price_btn">
+        <button class="btn">الأسعار</button>
+      </div>
+    </div>
+  </div>
+</section> 
+
+    
+<!-- عن المرشدين -->
+<section id="about">
+  <div class="container team pt-5">
+    <div class="container">
+      <h2 class="mentors-txt">مرشدونا المتميزون</h2>
+      <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-5 justify-content-center">
+        
+        <div class="col">
+          <div class="card">
+            <img src="../src/img/team-1.jpg" class="card-img-top" alt="mentor1">
+            <div class="info-layer">
+              <div class="info-body">
+                <h5>ولتر وايت</h5>
+                <p>مدير منتج</p>
+                <div class="social-layer">
+                  <a href="">
+                    <i class="bi bi-twitter-x"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="mentoooooor">مرشد</h3>
+          <p class="txt_mentoooooor">لوريم إيبسوم نص تجريبي يُستخدم في الطباعة. يتم استبداله لاحقًا بالمحتوى الحقيقي.</p>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../src/img/team-2.jpg" class="card-img-top" alt="mentor2">
+            <div class="info-layer">
+              <div class="info-body">
+                <h5>ولتر وايت</h5>
+                <p>مدير منتج</p>
+                <div class="social-layer">
+                  <a href="">
+                    <i class="bi bi-twitter-x"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="mentoooooor">مرشد</h3>
+          <p class="txt_mentoooooor">لوريم إيبسوم نص تجريبي يُستخدم في الطباعة. يتم استبداله لاحقًا بالمحتوى الحقيقي.</p>
+        </div>
+        
+        <div class="col">
+          <div class="card">
+            <img src="../src/img/team-3.jpg" class="card-img-top" alt="mentor3">
+            <div class="info-layer">
+              <div class="info-body">
+                <h5>ولتر وايت</h5>
+                <p>مدير منتج</p>
+                <div class="social-layer">
+                  <a href="">
+                    <i class="bi bi-twitter-x"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="mentoooooor">مرشد</h3>
+          <p class="txt_mentoooooor">لوريم إيبسوم نص تجريبي يُستخدم في الطباعة. يتم استبداله لاحقًا بالمحتوى الحقيقي.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>  
+</section>
+
+
+<!-- الأثر -->
+
+<section id="action" class="impact">
+  <div class="layer"></div>
+  <div class="container ">
+    <div class="row">
+      <div class="impact-content text-center">
+        <div class="impact-btn">
+          <a href="#main" class="rounded-5">أثرنا</a>
+        </div>
+        <p>
+          من خلال الجمع بين التعليم العملي، والإرشاد، وفرص العمل، نضمن أن كل شاب يكتسب وضوحًا ويبني الثقة ويحقق فرص نجاح حقيقية. معًا، نسعى لتقليل البطالة وتنمية المواهب ودعم النمو الاقتصادي.
+        </p>
+        <div class="impact_link">
+          <a href="#">
+            جرب اختبارنا الآن واكتشف أي مهنة تناسبك!
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- الفوتر -->
+  <div id="Footer">
+ <footer class="mt-5">
+   <div class="px-5 ">
+    <div class="row gy-4 ">
+      <div class="col-md-7 col-sm-12 footer-about text-center">
+        <a href="index.html" class="logo text-center">
+          <img src="../src/img/New logo 1.png" class="" alt="logo">
+        </a>
+        <p>نص تجريبي عن المنصة والتعليم وكيفية إفادة المتعلمين، سيتم استبداله لاحقًا بالمحتوى الحقيقي.</p>
+        <div class="social d-flex justify-content-center mt-5">
+          <a href="" class="d-flex">
+            <i class="bi bi-twitter-x"></i>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="col-md-2 col-sm-6 footer-links  ">
+        <h4>روابط مفيدة</h4>
+        <ul>
+          <li>
+            <a href="#">الرئيسية</a>
+          </li>
+          <li>
+            <a href="#">معلومات عنا</a>
+          </li>
+          <li>
+            <a href="#">الخدمات</a>
+          </li>
+          <li>
+            <a href="#">شروط الاستخدام</a>
+          </li>
+          <li>
+            <a href="#">سياسة الخصوصية</a>
+          </li>
+        </ul> 
+      </div>
+      
+      <div class="col-md-3 col-sm-6 footer-contact ">
+        <h4>تواصل معنا</h4>
+    
+        <p class="mt-4">
+        <b>الهاتف:</b> +1 5589 55488 55
+        </p>
+        <p>
+        <b>البريد الإلكتروني:</b> info@example.com
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom container mt-4 text-center">
+    <p>© جميع الحقوق محفوظة 2025 <b>كارير زِد</b></p>
+  </div>
+
+ </footer>
+</div>
+
+<script>
+        const btn = document.getElementById("BTN");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "EN") {
+      btn.textContent = "EN"; 
+    window.location.href = "index.html";
+
+    } else {
+      btn.textContent = "Arabic";
+ window.location.href = "sindex_Arabic.html";
+
+    }
+  });
+</script>
+
+<script src="../src/js/bootstrap.bundle.min.js"></script>
+<script src="../src/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit</title>
+   <link rel="stylesheet" href="../src/css/editprofile.css">
+   <link rel="stylesheet" href="src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<!-- container  -->
+   <!-- NAV -->
+  <nav class="navbar back-default navbar-expand-md fixed-top pb-0" id="navbar">
+        <div class="container-fluid mx-5">
+      
+      <a class="navbar-brand" href="#">
+        <img src="../src/img/New logo 1.png" alt="" class="logo">
+      </a>
+    
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fa-lg d-flex justify-content-center align-items-center my-3"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item p-3"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="englishcourses.html">Courses</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship.html">Internship</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+        
+        <form class="d-flex">
+        <div class="dropdown">
+  <i class="fa-solid fa-circle-user Icon m-3 mx-5 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown" 
+     aria-expanded="false"
+     style="font-size: 30px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+ <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+    <li><a class="dropdown-item" href="All SignUp.html"> sign up</a></li>
+    <li><a class="dropdown-item" href="All login.html">login</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">log out</a></li>
+  </ul>
+</div>
+          <button class="" id="BTn" type="button">Arabic</button>
+        </form>
+        
+      </div>
+    </div>    
+
+  </nav>
+  <div class="All">
+<div id="editprofileForm">
+   <!-- <button onclick="openEdit()" id="closeEdit"><i class="fa-solid fa-xmark fa-2xl"></i></button> -->
+    <button onclick="window.location.href='profile.html'" id="closeEdit"><i class="fa-solid fa-xmark fa-2xl"></i></button>
+  <div class="profile-pic">
+   <img src="../src/img/editop.png" id="profileImg" alt="profile">
+   <br>
+   <input type="file" id="picInput" accept="image/*" hidden>
+   <button class="upload-btn" onclick="document.getElementById('picInput').click()">Upload</button>
+    <div class="preview" id="picPreview"></div>
+  </div>
+<!-- form -->
+  <form id="profileForm">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="name">
+      </div>
+      <div class="form-group">
+        <label>Bio</label>
+        <textarea rows="3" name="bio"></textarea>
+      </div>
+        <h3>Contact Info</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="text" name="phone">
+        </div>
+      </div>
+        <div class="form-group">
+          <label>Linkedin</label>
+          <input type="url" name="Linkedin"></input>
+        </div>
+        <h3>Documents</h3>
+      <div class="form-group">
+    <input type="file" id="fileInput" name="document" hidden>
+   <div class="insert">
+    <div class="file-info" id="fileInfo">No file selected</div>
+    <button type="button" class="upload-btn" id="doc" onclick="document.getElementById('fileInput').click()">Choose File</button>
+   </div>
+   <!-- <a href="profile.html"><button type="button" class="Btn">Save Changes</button></a> -->
+    <button type="submit" class="Btn">Save Changes</button>
+
+</form>
+</div>
+</div>
+</div>
+<script>
+ const BTn = document.getElementById("BTn");
+  BTn.addEventListener("click", function () {
+    if (BTn.textContent === "EN") {
+      BTn.textContent = "EN"; 
+    window.location.href = "editprofile.html";
+
+    } else {
+      BTn.textContent = "Arabic";
+ window.location.href = "editprofile_ar.html";
+    }
+  });
+
+  // pic 
+    let picInput = document.querySelector("#picInput");
+    let picPreview = document.querySelector("#picPreview");
+    const profileImg = document.querySelector("#profileImg");
+    const defaultImg = profileImg.src;
+    picInput.addEventListener("change", function () {
+      let file = picInput.files[0];
+      if (file) {
+       console.log("chosen pic:");
+        console.log(file.name);
+        console.log(file.size);
+        console.log(file.type);
+
+        let reader = new FileReader();
+        reader.onload = function (e) {
+          profileImg.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+// file 
+    let fileInput = document.querySelector("#fileInput");
+    let fileInfo = document.querySelector("#fileInfo");
+    fileInput.addEventListener("change", function () {
+      let file = fileInput.files[0];
+      if (file) {
+        console.log("chosen file:");
+        console.log(file.name);
+        console.log(file.size);
+        console.log(file.type);
+        fileInfo.textContent = `📄 ${file.name} (${file.size} bytes, ${file.type})`;
+      }
+    });
+// submit 
+document.getElementById("profileForm").addEventListener("submit", async (e)=>{
+  e.preventDefault();
+
+  const token = localStorage.getItem("token");
+  const user_id = localStorage.getItem("user_id");
+  if (!token || !user_id) {
+    window.location.href = "./All login.html";
+    return;
+  }
+
+  const formData = new FormData(this);
+  formData.append("user_id", user_id);
+
+  // append profile image if chosen
+  const picFile = document.getElementById("picInput").files[0];
+  if (picFile) {
+    formData.append("profile_image", picFile);
+  }
+
+  try {
+    const res = await fetch("http://localhost:8888/users/edit",{
+      method: "PATCH",
+      headers:{
+        "Content-type":"Application/json",
+        "Authorization": "Bearer " + token
+      },
+      body: formData
+    })
+
+    const data = await res.json();
+
+    if (res.ok) {
+      alert("Profile updated successfully!");
+      window.location.href = "./profile.html"; // redirect back to profile
+    } else {
+      alert(data.error || "Failed to update profile");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong. Please try again later.");
+  }
+})
+// pop up js code
+      // function openEdit() {
+      //     const popEdit =
+      //         document.getElementById(
+      //             "editprofileForm"
+      //         );
+      //     popEdit.style.visibility =
+      //         popEdit.style.visibility ===
+      //             "visible"
+      //             ? "hidden"
+      //             : "visible";
+      // }
+  </script>
+    <script src="../src/bootstarp/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html> 

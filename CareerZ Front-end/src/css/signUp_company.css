@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+  background-color: rgba(224, 247, 255, 0.4) !important;
+  width: 100%;
+  overflow-x: hidden; 
+}
+
+/* NAVBAR */
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.back-default{
+  background-color: #fff;
+}
+
+.logo{
+    width: 60px;
+    height: 70px;
+}
+
+.icon{
+    font-size: 25px;
+}
+
+#Btn{
+    background-color: #b0e9fb;
+    width:60px;
+    height: 50px; 
+    border-radius: 50%;
+    position: relative;
+    border-color: #b0e9fb;
+    font-weight: bold;
+}
+
+
+
+
+
+/* sign div */
+.sign {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.FORM{
+  margin-top: 80px;
+}
+
+.SignUP{
+  margin-top: 100px;
+}
+
+
+/* Right side */
+.blueback {
+  background-color: #b0e9fb;
+  height: 100vh;
+  width: 40%; 
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  position: absolute;
+  right: 0; 
+  top: 100px;
+}
+
+.middle-pic {
+  position: absolute;
+  z-index: 2;
+  width: 200px;
+  right: 20%; 
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bg {
+  width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  right: 300px;
+  bottom: 20px;
+}
+
+/* Form */
+.sign-word {
+  font-weight: bolder !important;
+}
+
+form input {
+  border: none !important;
+  background-color: rgba(176, 233, 251, 0.67) !important;
+}
+
+.form-check-input {
+  background-color: rgb(223, 222, 222) !important;
+  border: none !important;
+}
+
+.form-check-input[type="radio"]:checked {
+  background-color: rgba(16, 143, 181, 0.67) !important;
+}
+
+.btn {
+  font-weight: 600 !important;
+}
+
+.already {
+  color: rgb(94, 94, 94);
+  font-weight: 600;
+}
+
+.convertLogin {
+  text-decoration: none;
+  color: rgb(72, 212, 255);
+}
+
+.btn_sginUP {
+  background-color: rgba(244, 233, 140, 1);
+  color: #000;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.btn_sginUP:hover {
+  background-color: rgba(220, 210, 120, 1);
+  color: #000;
+}
+
+/* للموبايل (شاشة أصغر من 768px) */
+@media (max-width: 768px) {
+  .bg,
+  .blueback {
+    display: none;
+  }
+
+  .sign {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+}
+
+/* لشاشات أصغر (الموبايل الصغير أقل من 480px) */
+@media (max-width: 480px) {
+  .sign h1 {
+    font-size: 22px;
+  }
+
+  form input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}

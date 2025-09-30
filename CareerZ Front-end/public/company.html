@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recruiting Suite</title>
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../src/css/company.css">
+
+</head>
+<body>
+  <!-- Navbar -->
+   <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+        <div class="container-fluid mx-5">
+          
+          <a class="navbar-brand" href="#">
+            <img src="../src/img/New logo 1.png" alt="" class="logo">
+          </a>
+        
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fa-lg"></i>
+          </button>
+          
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+          <li class="nav-item p-3"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="englishcourses.html">Courses</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship.html">Internship</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+            
+            <form class="d-flex">
+             <div class="dropdown">
+  <i class="fa-solid fa-circle-user Icon m-3 mx-5 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown" 
+     aria-expanded="false"
+     style="font-size: 30px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+ <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+    <li><a class="dropdown-item" href="All SignUp.html"> sign up</a></li>
+    <li><a class="dropdown-item" href="All login.html">login</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">log out</a></li>
+  </ul>
+</div>
+          <button class="" id="BTN" type="button">Arabic</button>
+
+            </form>
+            
+          </div>
+        </div>
+        
+        <script>
+          window.addEventListener('scroll' , function(){
+            var nav = document.getElementById('navbar')
+            if(window.scrollY > 5){
+              nav.classList.add('nav-back')
+              nav.classList.remove('back-trans')
+            }
+            else{
+              nav.classList.remove('nav-back')
+              nav.classList.add('back-trans')
+            }
+          })
+        </script>    
+    
+      </nav>
+
+  <!-- Hero -->
+   <div class="All">
+  <section class="hero">
+    <div class="hero-left">
+      <span class="tag">For Companies & Recruiters</span>
+      <h1>Hire Faster with a <br> Modern Recruiting <br>Suite</h1>
+      <p>Everything you need to create a company presence, post roles, <br> discover talent, and manage hiring— in one streamlined <br> platform.</p>
+      <div class="hero-buttons">
+        
+        <button class="btn-primary">Create Company Account</button>
+        <button class="btn-secondary">Post a job</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-box">
+        <div class="hero-buttons-box">
+          <button><span>🏢</span> Company Profile</button>
+          <button><span>📄</span> Job Posting</button>
+          <button><span>🔍</span> Talent Search</button>
+          <button><span>📥</span> Applications</button>
+        </div>
+        <div class="explore-box">
+          <button class="btn-explore">Explore Console</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="card">
+      <img src="../src/img/Group 237741.png" alt=""class="img_card">
+      <h3>Company Dashboard</h3>
+      <ul>
+        <li>Create a company account</li>
+        <li>Public company profile page</li>
+        <li>Team roles & permissions</li>
+        <li>Insights & activity feed</li>
+      </ul>
+    </div>
+    <div class="card">
+      <img src="../src/img/Group 237740.png" alt=""class="img_card">
+      <h3>Job Posting</h3>
+      <ul>
+        <li>Post internships & entry-level roles</li>
+        <li>Field & skill-based categorization</li>
+        <li>Application questions & screening</li>
+        <li>One-click Apply from portfolios</li>
+      </ul>
+    </div>
+    <div class="card">
+      <img src="../src/img/Group 237748.png" alt=""class="img_card">
+      <h3>Talent Search & Matching</h3>
+      <ul>
+        <li>Search student profiles</li>
+        <li>Direct messaging with candidates</li>
+        <li>Saved searches & shortlists</li>
+      </ul>
+    </div>
+    <div class="card">
+    <img src="../src/img/Group 237743.png" alt=""class="img_card">
+      <h3>Hiring Services</h3>
+      <ul>
+        <li>Centralized application tracking</li>
+        <li>Candidate quality reports</li>
+        <li>Export & compliance-ready logs</li>
+        <li>Offer & status management</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="how-it-works">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <h4>Step 1</h4>
+        <p><b>Create your company</b><br>Set up profile, brand, and team access in minutes.</p>
+      </div>
+      <div class="step">
+        <h4>Step 2</h4>
+        <p><b>Post roles & discover</b><br>Publish internships; search and match top talent.</p>
+      </div>
+      <div class="step">
+        <h4>Step 3</h4>
+        <p><b>Hire with confidence</b><br>Track applications, message candidates, and make offers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extras -->
+  <section class="extras">
+    <div class="extra-card">📊 Real-time<br>Hiring analytics</div>
+    <div class="extra-card">🔒 Secure<br>Data & privacy</div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to start hiring?</h2>
+    <p>Join companies attracting top student talent today.</p>
+    <div class="cta-buttons">
+    <a href="Company_SignUp.html">  <button class="btn-white">Create Account</button></a>
+      <button class="btn-dark">Start Posting</button>
+    </div>
+  </section>
+</div>
+<script>
+  const btn = document.getElementById("BTN");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "Arabic") {
+      btn.textContent = "EN"; 
+window.location.href = "company_Arabic.html";
+    } else {
+      btn.textContent = "Arabic";
+    window.location.href = "company_Arabic.html";
+    }
+  });
+
+</script>
+     <script src="../src/bootstarp/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

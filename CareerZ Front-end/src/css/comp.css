@@ -1,0 +1,324 @@
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .obody {
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 1200px; /* زودت عرض الكونتينر */
+      padding: 20px;
+      height: 700px; box-shadow: 0px 6px 18px rgba(0,0,0,0.1);
+      animation: fadeIn 0.7s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+ /* خليته اوتوماتيك */
+    
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-box {
+      border: 1px solid #ddd;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      color: #777;
+      border-radius: 4px;
+    }
+
+    .company-name {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .header img {
+      width: 180px;
+      max-width: 100%;
+    }
+
+    /* Description */
+    .description {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      height: 80px;
+      margin: 20px 0;
+      padding: 10px;
+      color: #888;
+    }
+
+    /* Tabs */
+      .tabs {
+      display: flex;
+      margin-bottom: 20px;
+      width: 400px;
+      gap: 2px;
+    }
+
+    .tabs button {
+        
+      flex: 1;
+      padding: 10px 2px 10px 2px;
+      border: 1px solid #ccc;
+      background: #e5f1fb;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 15px 10px 15px 3px;
+      
+      
+    }
+
+    .tabs button.active {
+      background: #0d2e72;
+      color: #fff;
+      
+    }
+
+
+    .diva {
+      border-radius: 15px 3px 3px 3px;
+    }
+
+    /* Jobs Section */
+  .jobs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* يخليها اتنين جنب بعض */
+  gap: 30px; /* المسافة بينهم */
+}
+
+@media (max-width: 768px) {
+  .jobs {
+    grid-template-columns: 1fr; /* على الشاشات الصغيرة تبقى كارت تحت التاني */
+  }
+}
+
+
+    .job-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #c8e0f4;
+      border-radius: 6px;
+      padding: 15px;
+      background: #e9f4fb;
+      width: 410px;
+      height: 100px;
+      margin-left: 50px;
+    }
+
+    .job-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .calendar {
+      font-size: 30px;
+      color: #0d2e72;
+    }
+
+    
+    .job-details {
+      
+      font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+
+line-height: 100%;
+letter-spacing: 0%;
+
+    }
+
+    .job-details span {
+      display: block;
+      color: #555;
+     font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+padding-top: 10px;
+line-height: 100%;
+letter-spacing: 0%;
+
+
+    }
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.job-card:hover {
+  transform: scale(1.03);
+}
+
+
+    .apply-btn {
+      
+       background: #154D71E5;
+;
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      
+      font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 17px;
+
+line-height: 100%;
+letter-spacing: 0%;
+
+    }
+
+    .apply-btn:hover {
+      background: #1540a4;
+    }
+
+    /* Footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      max-width: 1000px;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-family: Inter, sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: #0D4671E8;
+      margin-left: 60px;
+
+    }
+.apply-btn:hover {
+  background: #0b3d5a;
+}
+
+    .footer div {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+     
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .tabs {
+        width: 100%;
+      }
+
+      .footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+/* Responsive */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .jobs {
+    grid-template-columns: 1fr 1fr; /* خلي الكروت اتنين جنب بعض */
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .job-card {
+    width: 100%;
+    max-width: 400px; /* نفس عرض الكارت الأصلي */
+    margin-left: 0;
+  }
+
+  .header img {
+    width: 150px; /* يقل شوية عشان يظبط */
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .jobs {
+    grid-template-columns: 1fr; /* كارت تحت التاني */
+    justify-items: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .tabs button {
+    width: 100%;
+  }
+
+  .job-card {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto; /* يخلي الطول مرن */
+  }
+
+  .apply-btn {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+
+  .header img {
+    width: 120px; /* أصغر للموبايل */
+  }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/css/quiz intro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  
+    <title>Quiz intro</title>
+</head>
+<body>
+<nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+        <div class="container-fluid mx-5">
+          
+          <a class="navbar-brand" href="#">
+            <img src="../src/img/New logo 1.png" alt="" class="logo">
+          </a>
+        
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fa-lg"></i>
+          </button>
+          
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+         <ul class="navbar-nav">
+          <li class="nav-item p-3"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="englishcourses.html">Courses</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship.html">Internship</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+            
+            <form class="d-flex">
+               <!-- أيقونة يوزر مع dropdown -->
+<div class="dropdown">
+  <i class="fa-solid fa-circle-user icon m-3 mx-5 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown" 
+     aria-expanded="false"
+     style="font-size: 30px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+     <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+    <li><a class="dropdown-item" href="All SignUp.html"> sign up</a></li>
+    <li><a class="dropdown-item" href="All login.html">login</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">log out</a></li>
+  </ul>
+</div>
+          <button class="" id="BTN" type="button">Arabic</button>
+
+            </form>
+            
+          </div>
+        </div>
+        
+        <script>
+          window.addEventListener('scroll' , function(){
+            var nav = document.getElementById('navbar')
+            if(window.scrollY > 5){
+              nav.classList.add('nav-back')
+              nav.classList.remove('back-trans')
+            }
+            else{
+              nav.classList.remove('nav-back')
+              nav.classList.add('back-trans')
+            }
+          })
+        </script>    
+    
+      </nav>
+
+     <div class="All">
+    <main>
+   
+    <div class="">
+        <h2>
+             <i class="fa-solid fa-star" style="color: #f4e98c;"></i>
+             Discover Your Career Path 
+             <i class="fa-solid fa-star" style="color: #f4e98c;"></i>
+            </h2> 
+        <p>Choosing the right career path isn’t always easy.
+     That’s why we created a quick quiz to help you explore your interests — whether it’s Design, Programming,Marketing, or another exciting field.</p>
+     <br>
+     <p>Your answers will guide us to recommend the most suitable course for you and show you a clear roadmap to start your journey.</p>
+     <br>
+     <p>Note: There are no right or wrong answers — just be honest so we can give you the closest match to your true interests. </p>
+    </div>
+    <div class="btn">
+      <a href="quiz.html"><button>Start Quiz <i class="fa-solid fa-rocket" style="color: #f4e98c;"></i> </button></a>
+
+    </div>
+    </main>
+    </div>
+    <script>
+          const btn = document.getElementById("BTN");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "Arabic") {
+      btn.textContent = "EN"; 
+window.location.href = "quiz intro_ِArabic.html";
+    } else {
+      btn.textContent = "Arabic";
+    window.location.href = "quiz intro.html";
+    }
+  });
+    </script>
+       <script src="../src/bootstarp/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

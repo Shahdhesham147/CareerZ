@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ملف الشركة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: #f4f6fb;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 16px;
+      padding: 25px;
+      max-width: 950px;
+      width: 100%;
+      box-shadow: 0px 6px 18px rgba(0,0,0,0.1);
+      animation: fadeIn 0.7s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* ===== الهيدر ===== */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .company-logo {
+      width: 70px;
+      height: 70px;
+      background: #eef3ff;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #0d2e72;
+      border: 2px solid #cbd8f5;
+    }
+
+    .company-name {
+      font-size: 26px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .company-img {
+      width: 200px;
+      border-radius: 12px;
+    }
+
+    .description {
+      margin-top: 20px;
+      border: 1px dashed #bbb;
+      padding: 15px;
+      border-radius: 10px;
+      color: #555;
+      min-height: 60px;
+      background: #fafbff;
+    }
+
+    /* ===== التابس ===== */
+    .tabs {
+      display: flex;
+      margin-top: 25px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 12px 0;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      border: none;
+      transition: 0.3s;
+      background: #eaf0fb;
+      color: #0d2e72;
+      min-width: 120px;
+    }
+
+    .tab.active {
+      background: #0d2e72;
+      color: #fff;
+      box-shadow: 0px 4px 12px rgba(13,46,114,0.3);
+    }
+
+    .tab:hover:not(.active) {
+      background: #d5e2fa;
+    }
+
+    /* ===== المحتوى ===== */
+    .tab-content {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .tab-content.active {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    /* ===== الكروت ===== */
+    .job-card {
+      background: #f8fbff;
+      border: 1px solid #d8e3f5;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      transition: 0.3s;
+      flex-wrap: wrap;
+    }
+
+    .job-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0px 6px 16px rgba(0,0,0,0.1);
+    }
+
+    .job-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .calendar-icon {
+      background: #0d2e72;
+      color: #fff;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 18px;
+      text-align: center;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .job-text strong {
+      font-size: 16px;
+      color: #111;
+      display: block;
+    }
+
+    .job-text span {
+      font-size: 13px;
+      color: #666;
+      display: block;
+    }
+
+    .apply-btn {
+      background: #0d2e72;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
+      white-space: nowrap;
+    }
+
+    .apply-btn:hover {
+      background: #1640a0;
+    }
+
+    /* ===== الفوتر ===== */
+    .footer {
+      margin-top: 25px;
+      padding: 15px;
+      border-top: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+      color: #0d2e72;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer a {
+      color: #0d2e72;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* ===== ريسبونسيف ===== */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .company-img {
+        width: 100%;
+        max-width: 300px;
+      }
+      .logo-section {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .tab {
+        flex: 1 1 100%;
+      }
+      .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .apply-btn {
+        align-self: flex-end;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- الهيدر -->
+    <div class="header">
+      <div class="logo-section">
+        <div class="company-logo">شعار</div>
+        <div class="company-name">شركة ABC</div>
+      </div>
+      <img src="../src/img/hola.png" alt="company" class="company-img">
+    </div>
+
+    <!-- الوصف -->
+    <div class="description">هنا تكتب وصف الشركة...</div>
+
+    <!-- التابس -->
+    <div class="tabs">
+      <button class="tab active" onclick="openTab('internships', this)">التدريبات</button>
+      <button class="tab" onclick="openTab('jobs', this)">الوظائف</button>
+    </div>
+
+    <!-- التدريبات -->
+    <div id="internships" class="tab-content active">
+      <div class="job-card">
+        <div class="job-info">
+          <div class="calendar-icon">12</div>
+          <div class="job-text">
+            <strong>أخصائي IT</strong>
+            <span>14 فبراير - 31 مايو</span>
+          </div>
+        </div>
+        <button class="apply-btn">تقديم</button>
+      </div>
+
+      <div class="job-card">
+        <div class="job-info">
+          <div class="calendar-icon">📅</div>
+          <div class="job-text">
+            <strong>أخصائي UI/UX</strong>
+            <span>14 فبراير - 31 مايو</span>
+          </div>
+        </div>
+        <button class="apply-btn">تقديم</button>
+      </div>
+    </div>
+
+    <!-- الوظائف -->
+    <div id="jobs" class="tab-content">
+      <div class="job-card">
+        <div class="job-info">
+          <div class="calendar-icon">📅</div>
+          <div class="job-text">
+            <strong>أخصائي IT</strong>
+            <span>28 فبراير - 15 يونيو</span>
+          </div>
+        </div>
+        <button class="apply-btn">تقديم</button>
+      </div>
+
+      <div class="job-card">
+        <div class="job-info">
+          <div class="calendar-icon">📅</div>
+          <div class="job-text">
+            <strong>محاسب</strong>
+            <span>14 فبراير - 31 مايو</span>
+          </div>
+        </div>
+        <button class="apply-btn">تقديم</button>
+      </div>
+    </div>
+
+    <!-- الفوتر -->
+    <div class="footer">
+      <div>📧 البريد: <a href="mailto:abcco@gmail.com">abcco@gmail.com</a></div>
+      <div>📞 الخط الساخن: 19920</div>
+    </div>
+  </div>
+
+  <script>
+    function openTab(tabId, element) {
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      element.classList.add('active');
+    }
+  </script>
+</body>
+</html>

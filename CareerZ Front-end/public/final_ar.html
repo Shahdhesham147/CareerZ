@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إتمام الكورس</title>
+  <link rel="stylesheet" href="../src/css/endcour.css">
+</head>
+<body class="boody"> 
+  <div class="card">
+    <div class="image-container">
+      <img src="../src/img/Frame.png" alt="مبروك">
+    </div>
+    <div class="par">مبروك!</div>
+    <div class="para">
+      <p class="pro">لقد أنهيت الكورس بنجاح </p>
+      <p class="pro">دي مجرد البداية.. استمر وتعلم أكتر </p>
+    </div>
+    <button class="buttona" onclick="takeAnotherCourse()">ابدأ كورس جديد</button>
+  </div>
+
+  <script>
+    function takeAnotherCourse() {
+      alert("جاري تحويلك إلى الكورسات الأخرى...");
+      // هنا تقدر تغيري الalert وتخليه يفتح صفحة تانية:
+      // window.location.href = "courses.html";
+    }
+  </script>
+</body>
+</html>

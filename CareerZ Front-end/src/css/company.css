@@ -1,0 +1,164 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif}
+body{background:#f9f9f9;color:#222;line-height:1.6}
+
+
+
+/* NAVBAR */
+.logo{
+    width: 60px;
+    height: 70px;
+ 
+  
+}
+
+.icon{
+    font-size: 25px;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); 
+}
+  
+.nav-back{
+    background-color: rgba(207, 238, 255);
+    transition: all 0.7s ease-in-out;
+   
+}
+  
+.back-trans{
+    background-color: transparent;
+
+}
+.FORM{
+  margin-top: 80px;
+}
+#BTN{
+    background-color: #b0e9fb;
+    width:60px;
+    height: 50px; 
+    border-radius: 50%;
+    position: relative;
+    border-color: #b0e9fb;
+    font-weight: bold;
+}
+#navbar{
+  background-color: white;
+}
+.SignUP{
+  margin-top: 100px;
+}
+/* Hero */
+.hero{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;padding:60px 50px;background:#fff}
+.hero-left{flex:1}
+.tag{background:#e6f0ff;color:#0044cc;padding:5px 15px;border-radius:20px;font-size:14px}
+.hero-left h1{margin:20px 0;font-size:34px;font-weight:bold}
+.hero-left p{margin-bottom:20px;color:#555}
+.hero-buttons{display:flex;gap:15px;flex-wrap:wrap}
+.btn-primary{background:#0044cc;color:#fff;border:none;padding:12px 20px;border-radius:8px;cursor:pointer}
+.btn-secondary{background:#fff;border:1px solid #ccc;padding:12px 20px;border-radius:8px;cursor:pointer}
+
+/* Hero Right Box */
+.hero-right .hero-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+}
+.hero-buttons-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.hero-buttons-box button {
+  padding: 14px 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f9fafb;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.All{
+  margin-top: 80px;
+}
+.tag{
+ color: white;
+ background-color:rgba(13, 70, 113, 1) ;
+ padding: 10px;
+}
+.btn-primary{
+   color: white;
+ background-color:rgba(13, 70, 113, 1) ;
+}
+.img_card{
+  width: 100px;
+  height: auto;
+  margin-left: 70px;
+}
+h3{
+  text-align: center;
+}
+.hero-buttons-box button:hover {background:#eef5ff;border-color:#0044cc}
+.explore-box {border-top:1px solid #eee;padding-top:15px}
+.btn-explore {
+  width: 100%;
+  padding: 14px;
+  background: #f3f3f3;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-explore:hover {background:#e0eaff;border-color:#0044cc}
+
+/* Features */
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:50px}
+.card{background:#fff;padding:20px;border-radius:12px;border:1px solid #eee;box-shadow:0 3px 6px rgba(0,0,0,0.05)}
+.card h3{margin-bottom:15px}
+.card ul{list-style:none}
+.card li{margin-bottom:8px;color:#555}
+
+/* How it works */
+.how-it-works{padding:50px;background:#fff}
+.how-it-works h2{margin-bottom:20px}
+.steps{display:flex;gap:20px;flex-wrap:wrap}
+.step{flex:1;background:#f9fafb;padding:20px;border-radius:8px}
+
+/* Extras */
+.extras{display:flex;gap:20px;padding:30px;flex-wrap:wrap}
+.extra-card{flex:1;background:#fff;padding:30px;border-radius:12px;border:1px solid #eee;box-shadow:0 3px 6px rgba(0,0,0,0.05);text-align:center;font-weight:bold}
+
+/* CTA */
+.cta{background:#002b5b;color:#fff;padding:60px;text-align:center}
+.cta h2{margin-bottom:10px}
+.cta p{margin-bottom:25px;color:#ddd}
+.cta-buttons{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:#002b5b;border:none;padding:12px 20px;border-radius:8px;cursor:pointer}
+.btn-dark{background:#0044cc;color:#fff;border:none;padding:12px 20px;border-radius:8px;cursor:pointer}
+
+
+/* ================== Responsive ================== */
+@media (max-width: 1024px) {
+  .features{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (max-width: 768px) {
+  .hero{flex-direction:column;align-items:center;padding:40px 20px;text-align:center}
+  .hero-left h1{font-size:28px}
+  .hero-right .hero-box{width:100%}
+  .features{grid-template-columns:1fr}
+  .steps{flex-direction:column}
+  .extras{flex-direction:column}
+}
+
+@media (max-width: 480px) {
+  .navbar{flex-direction:column;gap:10px}
+  .hero-left h1{font-size:22px}
+  .hero-buttons{flex-direction:column}
+  .hero-buttons-box{grid-template-columns:1fr}
+}

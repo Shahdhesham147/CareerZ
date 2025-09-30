@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Css links -->
+  <link rel="stylesheet" href="../src/icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../src/css/style.css">
+  <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerZ</title>
+</head>
+<body>
+    
+    
+  <!-- Home + Nav  -->
+  <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+    <div class="container-fluid mx-5">
+      
+      <a class="navbar-brand" href="#">
+        <img src="../src/img/newlogo.png" alt="" class="logo">
+      </a>
+    
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fa-lg"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <ul class="navbar-nav justify-content-center align-items-center">
+          <li class="nav-item p-3"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="englishcourses.html">Courses</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship.html">Internship</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="aboutus.html">About Us</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="contactus.html">Contact</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="quiz intro.html">Quiz</a></li>
+        </ul>
+      </div>
+        <form class="d-flex">
+       <!-- أيقونة يوزر مع dropdown -->
+<div class="dropdown">
+  <i class="fa-solid fa-user icon m-3 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown" 
+     aria-expanded="false"
+     style="font-size: 24px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+    <li><a class="dropdown-item profile-link" href="profile.html">Profile</a></li>
+    <li><a class="dropdown-item signup-link" href="All SignUp.html"> sign up</a></li>
+    <li><a class="dropdown-item login-link" href="./login.html">login</a></li>
+    <!-- <li><hr class="dropdown-divider"></li> -->
+    <li><a class="dropdown-item logout-link" href="#">log out</a></li>
+  </ul>
+</div>
+    </form>
+      <button class="" id="BTN" type="button">AR</button>
+      </div>
+    </div>
+    
+    <script>
+      window.addEventListener('scroll' , function(){
+        var nav = document.getElementById('navbar')
+        if(window.scrollY > 500){
+          nav.classList.add('nav-back')
+          nav.classList.remove('back-default')
+        }
+        else{
+          nav.classList.remove('nav-back')
+          nav.classList.add('back-default')
+        }
+      })
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const token = localStorage.getItem("token");
+    const role = localStorage.getItem("role")
+    const userId = localStorage.getItem("user_id");
+
+    const profileLink = document.querySelector(".profile-link");
+    const logoutLink = document.querySelector(".logout-link");
+    const loginLink = document.querySelector(".login-link");
+    const signupLink = document.querySelector(".signup-link");
+
+    if (!token || !userId) {
+      // No user logged in → hide profile + logout
+      profileLink.style.display = "none";
+      logoutLink.style.display = "none";
+
+      // Show signup + login
+      loginLink.style.display = "block";
+      signupLink.style.display = "block";
+    } else {
+      document.querySelector(".profile-link").addEventListener("click", (e)=>{
+        e.preventDefault();
+        if(role == "mentor"){
+          window.location.href = "./mentor.html"
+        }else if(role =="user"){
+          window.location.href = "./profile.html"
+        }else{
+          window.location.href = './company.html'
+        }
+      })
+      // User logged in → hide login + signup
+      loginLink.style.display = "none";
+      signupLink.style.display = "none";
+    }
+
+    // ✅ Logout handler
+    logoutLink.addEventListener("click", async (e) => {
+      e.preventDefault();
+      // Clear storage + redirect
+      localStorage.removeItem("token");
+      localStorage.removeItem("user_id");
+      localStorage.clear
+      window.location.href = "./login.html";
+    });
+  });
+    </script>    
+
+  </nav>
+
+    
+  <section id="home" class="home pt-5">
+    <!-- particles.js container --> <div id="particles-js"></div> 
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>  
+    <script src="../src/js/girl.js"></script>
+    <div class="container_Home ms-5 mt-5">
+      <div class="">
+        <div class="home_text pb-4">
+          <p class="text_1">Discover your passion <br> 
+            & start your journey <br>
+            to the job market
+          </p>
+          <p class="text_2">Unlock your potential with our comprehensive educational
+            platform—<br> designed to inspire, engage, 
+            and equip learners with the skills and <br>
+            knowledge needed to thrive in an ever-changing world.
+          </p>
+       <a href="login.html" style="text-decoration: none;">  <button class="btn_home my-5"> Get Started <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a> 
+        </div>
+    </div>
+  </div>
+  </section>
+  
+  <!-- PLATFORM -->
+  <div class="container platform_container mt-5">
+    <div class=" platform_Title">
+      <h1>How the platform works</h1>
+    </div>
+    
+    <div class="row row-cols-1 row-cols-md-5 g-4 mt-5">
+      
+      <div class="col">
+        <div class="text-center platform_block">
+          <div class="platform_icon">
+            <i class="bi bi-search"></i>
+          </div>
+          <div class="card_popup">
+            <p>
+              Through a smart assessment, We help students and graduates discover the fields that match their interests, 
+              strengths, and future ambitions uncovering their true passions and potential. 
+            </p>
+          </div>
+          <h5 class="card-title">Discover your path</h5>
+        </div>
+      </div>
+      
+      <div class="col">
+        <div class="text-center platform_block">
+          <div class="platform_icon">
+            <img src="../src/img/image 7.png" alt="">
+          </div>
+          <div class="card_popup">
+            <p>
+              With tailored learning paths, practical projects, interactive bootcamps, and real mentorship, 
+            we make sure learning goes beyond theory — turning knowledge into real-world skills.
+          </p>
+          </div>
+          <h5 class="card-title">Learn & build</h5>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="text-center platform_block">
+          <div class="platform_icon">
+            <img src="../src/img/image 6.png" alt="">
+          </div>
+          <div class="card_popup">
+            <p>
+              We guide young people to be fully career-ready by building strong CVs, 
+            professional LinkedIn profiles, and preparing them with mock interviews 
+            and essential life skills that employers truly value.
+          </p>
+          </div>
+          <h5 class="card-title">Develop yourself</h5>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="text-center platform_block">
+          <div class="platform_icon">
+            <img src="../src/img/image 8.png" alt="">
+          </div>
+          <div class="card_popup">
+            <p>
+             Every learner can create a personalized portfolio on our platform, 
+            showcasing their projects, achievements, and progress — 
+            making it easier for companies to discover their capabilities.
+          </p>
+          </div>
+          <h5 class="card-title">Portfolio</h5>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="text-center platform_block">
+          <div class="platform_icon">
+            <img src="../src/img/image 9.png" alt="">
+          </div>
+          <div class="card_popup">
+            <p>
+             Through strong partnerships with local and international companies, 
+            we open direct pathways to internships, jobs, and freelance projects — 
+            bridging the gap between education and employment.
+            </p>
+          </div>
+          <h5 class="card-title">Opportunities</h5>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+
+<!-- COURSES -->
+<section id="courses">
+  <div class="Top_Rate_Course">
+    <div class=" container mt-5 py-5">
+      <div class="stats">
+        
+        <div class="col">
+          <div class="subjects card">
+            <span class="mt-4"> Education </span>
+            <p>subjects</p>
+            <p class="num">+40</p>
+          </div>
+        </div>
+      
+        <div class="col">
+          <div class="courses card">
+            <span class="mt-4"> Online </span>
+            <p>courses</p>
+            <p class="num ">+120</p>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="reviews card">
+            <span class="mt-4">
+              <div class="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="rating">&nbsp;&nbsp;5.0</p>
+            </span>
+            <p>learner reviews</p>
+            <p class="num">+180k</p>
+          </div>
+        </div>
+      </div> 
+    </div> 
+  </div>
+</section>
+
+
+<!-- INTERNSHIP -->
+<section id="internship">
+  <div class=" Popular_Courses container mt-4">
+    <div class="row">
+      <h2>Our Popular Courses</h2>
+      <div class="arrowall">
+        <i class="fa-solid fa-arrow-right fa-flip-horizontal" style="color: rgba(0, 0, 0, 0.39);"></i>
+
+        <div class="coursesss row ">
+        <button class="course-card active col-sm-6 col-md-3">
+          <img src="../src/img/image 12.png" alt="UI">
+          <p>UI Design<br>basics</p>
+        </button>
+        
+        <button class="course-card col-sm-6 col-md-3">
+          <img src="../src/img/image 13.png" alt="Marketing">
+          <p>Business<br>marketing</p>
+        </button>
+
+        <button class="course-card col-sm-6 col-md-3">
+          <img src="../src/img/image 14.png" alt="Web Dev">
+          <p>Website<br>Development</p>
+        </button>
+
+        <button class="course-card col-sm-6 col-md-3">
+          <img src="../src/img/image 15.png" alt="Programming">
+          <p>Programming<br>and tech</p>
+        </button>
+      </div>
+      <i class="fa-solid fa-arrow-right" style="color: rgba(0, 0, 0);"></i>
+      </div>
+      
+      <div class="why">
+        <p><b>Tailored for Students & Young Adults:</b> Our platform is built to help teens and university students explore their passions, discover strengths, and unlock career paths that truly fit them.</p>
+        <p><b>Learn from Real-World Mentors:</b> Guidance from industry experts and professionals who’ve walked the path — so you gain practical insights, not just theory.</p>
+        <p id="WhycareerZ">
+          Why Choose CareerZ
+          <br>
+          <span id="ans"><b>
+          Self-Discovery & Career Readiness,
+          <br>
+          Designed for Youth</b>
+        </span>
+        </p>
+        <p><b>Skills that Open Doors:</b> From communication and problem-solving to digital and career skills — every module is designed to prepare you for real opportunities.</p>
+        <p><b>Personal Growth, Your Way:</b> Flexible and personalized learning, matching your pace, your interests, and your dreams.</p>
+      </div>
+      
+      <!-- <div class="Price_btn">
+        <button class="btn">Premium</button>
+      </div> -->
+    </div>
+  </div>
+</section> 
+
+    
+<!-- ABOUT MENTORS -->
+<section id="about">
+  <div class="container team pt-5">
+    <div class="container">
+      <h2 class="mentors-txt">Our excellent mentors</h2>
+      <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-5 justify-content-center">
+        
+        <div class="col">
+          <div class="card">
+            <img src="../src/img/team-1.jpg" class="card-img-top" alt="mentor1">
+            <div class="info-layer">
+              <div class="info-body">
+                <h5>Walter White</h5>
+                <p>Product Manager</p>
+                <div class="social-layer">
+                  <a href="">
+                    <i class="bi bi-twitter-x"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="mentoooooor">mentor</h3>
+          <p class="txt_mentoooooor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ratione molestiae deserunt quidem doloribus eos voluptas ipsum deleniti itaque, velit corporis sunt asperiores blanditiis dolorem tempora provident qui distinctio! Voluptates?</p>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../src/img/team-2.jpg" class="card-img-top" alt="mentor2">
+            <div class="info-layer">
+              <div class="info-body">
+                <h5>Walter White</h5>
+                <p>Product Manager</p>
+                <div class="social-layer">
+                  <a href="">
+                    <i class="bi bi-twitter-x"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="mentoooooor">mentor</h3>
+          <p class="txt_mentoooooor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ratione molestiae deserunt quidem doloribus eos voluptas ipsum deleniti itaque, velit corporis sunt asperiores blanditiis dolorem tempora provident qui distinctio! Voluptates?</p>
+        </div>
+        
+        <div class="col">
+          <div class="card">
+            <img src="../src/img/team-3.jpg" class="card-img-top" alt="mentor3">
+            <div class="info-layer">
+              <div class="info-body">
+                <h5>Walter White</h5>
+                <p>Product Manager</p>
+                <div class="social-layer">
+                  <a href="">
+                    <i class="bi bi-twitter-x"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="mentoooooor">mentor</h3>
+          <p class="txt_mentoooooor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ratione molestiae deserunt quidem doloribus eos voluptas ipsum deleniti itaque, velit corporis sunt asperiores blanditiis dolorem tempora provident qui distinctio! Voluptates?</p>
+        </div>
+
+      </div>
+    </div>
+  </div>  
+</section>
+
+
+<!-- IMPACT -->
+<section id="action" class="impact">
+  <div class="layer"></div>
+  <div class="container">
+    <div class="row">
+      <div class="impact-content text-center">
+        <div class="impact-btn">
+          <a href="#main" class="rounded-5">Our Impact</a>
+        </div>
+        <p>
+          By combining practical education, mentorship, and employment opportunities, 
+          we ensure that every young person gains clarity, builds confidence, and secures real chances for success. 
+          Together, we aim to reduce unemployment, nurture talent, and drive economic growth.
+        </p>
+        <div class="impact_link">
+          <a href="All SignUp.html">
+            Sign up to take our quiz now and discover which career was made for you!
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- FOOTER -->
+  <div id="Footer">
+ <footer class="mt-5">
+   <div class="px-5 ">
+    <div class="row gy-4 ">
+      <div class="col-md-7 col-sm-12 footer-about text-center">
+        <a href="index.html" class="logo text-center">
+          <img src="../src/img/newlogo.png" class="logo" alt="logo">
+        </a>
+        <p>Cras fermentum odio eu feugiat lide par naso tierra.<Br> Justo eget nada terra videa magna derita valies<br> darta donna mare fermentum iaculis eu non diam phasellus.</p>
+        <div class="social d-flex justify-content-center mt-5">
+          <a href="" class="d-flex">
+            <i class="bi bi-twitter-x"></i>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="col-md-2 col-sm-6 footer-links  ">
+        <h4>Useful links</h4>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="aboutus.html">About us</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">Terms of service</a>
+          </li>
+          <li>
+            <a href="#">Privacy policy</a>
+          </li>
+        </ul> 
+      </div>
+      
+      <div class="col-md-3 col-sm-6 footer-contact ">
+        <h4>Contact Us</h4>
+        <p class="mt-4">
+        <b>Phone:</b> +1 5589 55488 55
+        </p>
+        <p>
+        <b>Email:</b> info@example.com
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom container mt-4 text-center">
+    <p>© Copyright 2025 <b>Career Z</b> All Rights Reserved</p>
+  </div>
+
+ </footer>
+</div>
+<div class="lol">
+<button id="backToTop" style="right: 2px; left: auto;">
+  <i class="fa-solid fa-circle-up"></i></button></div>
+<!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-6065bfed-583c-4868-b228-8d6931132e4a" data-elfsight-app-lazy></div>
+<!-- <script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-758ab3b5-0a35-408f-83f5-f16ccba75122" data-elfsight-app-lazy id="Chatbot"></div> -->
+  <script>
+   const backToTop = document.getElementById("backToTop");
+
+    // Show button when scrolling down
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    };
+
+    // Smooth scroll to top when clicked
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+ const btn = document.getElementById("BTN");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "AR") {
+      btn.textContent = "EN"; 
+       window.location.href = "index_Arabic.html";
+      
+
+    } else {
+      btn.textContent = "AR";
+   window.location.href = "index.html";
+    }
+  });
+</script>
+<!-- </div> -->
+<script src="../src/js/bootstrap.bundle.min.js"></script>
+<script src="../src/js/main.js"></script>
+
+</body>
+</html>
+

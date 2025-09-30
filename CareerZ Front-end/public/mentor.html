@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/mentor.css">
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <title>mentors profile</title>
+</head>
+<body>
+      <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+        <div class="container-fluid mx-5">
+          
+          <a class="navbar-brand" href="#">
+            <img src="../src/img/New logo 1.png" alt="" class="logo">
+          </a>
+        
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fa-lg"></i>
+          </button>
+          
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+           
+          <li class="nav-item p-3"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="englishcourses.html">Courses</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship.html">Internship</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">Contact</a></li>
+       
+            </ul>
+            
+            <form class="d-flex">
+             <div class="dropdown">
+  <i class="fa-solid fa-circle-user icon m-3 mx-5 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown" 
+     aria-expanded="false"
+     style="font-size: 30px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+ <li><a class="dropdown-item" href="mentor.html">Profile</a></li>
+    <li><a class="dropdown-item" href="All SignUp.html"> sign up</a></li>
+    <li><a class="dropdown-item" href="All login.html">login</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">log out</a></li>
+  </ul>
+</div>
+
+          <button class="" id="BTN" type="button">Arabic</button>
+
+            </form>
+            
+          </div>
+        </div>
+        
+        <script>
+          window.addEventListener('scroll' , function(){
+            var nav = document.getElementById('navbar')
+            if(window.scrollY > 5){
+              nav.classList.add('nav-back')
+              nav.classList.remove('back-trans')
+            }
+            else{
+              nav.classList.remove('nav-back')
+              nav.classList.add('back-trans')
+            }
+          })
+        </script>    
+    
+      </nav>
+
+    <div class="container">
+    <div class="left-col">
+    <div class="instructor">
+        <img src="../src/img/02f8d963fe82f4b52e3e62bb86042daa9c5e9fad.jpg" alt="instructor">
+        <h2>Sara Ahmed</h2>
+        <p>English instructor at the British council</p>
+        <button>Book a private lesson</button>
+    </div>
+
+    <div class="about">
+        <h2>About me</h2>
+        <p>This is me an English instructor xxxxx x xx xx xx x xxxxx xxx xx xxxx xxxxxxx xxxx xxxxxx xxxx</p>
+        <span>Masters</span>
+        <span>Online Education</span>
+    </div>
+
+    <div class="contact">
+        <p>Location:</p>
+        <i class="fa-solid fa-location-dot" style="color: #0077cc;"></i>Cairo,Egypt
+        <p>Email:</p>
+        <i class="fa-solid fa-envelope" style="color: #0077cc;"></i><a href=""> saraah@gmail.com</a>
+        <p>Linkedin</p>
+        <i class="fa-brands fa-linkedin" style="color: #0077cc;"></i><a href=""> https//www.linkedin/saraah/121342123/12123133</a>
+    </div>
+   </div>
+   <div class="right-col">
+    <div class="edu">
+    <h2>Educational Background:</h2>
+
+    <div class="edu-item">
+        <img src="../src/img/images.jpeg" alt="Helwan University">
+        <div class="edu-info">
+            <h4>Helwan University</h4>
+            <p>Bachelor's Degree</p>
+        </div>
+        <span>Show Certificate</span>
+    </div>
+
+    <div class="edu-item">
+        <img src="../src/img/download.png" alt="Harvard University">
+        <div class="edu-info">
+            <h4>Harvard University</h4>
+            <p>Master's Degree</p>
+        </div>
+        <span>Show Certificate</span>
+    </div>
+</div>
+
+  
+    <div class="courses">
+    <a href="add course.html"><button class="BUTTON"><span class="down">+</span>Add</button>
+              <div class="course-item">
+            <div class="course-detail">English</div>
+            <div class="course-lessons">8 lesson/1 month</div>
+            <div class="course-level">For beginner</div>
+            <div class="course-price">200 L.E</div>
+          </div>
+          <div class="course-item">
+            <div class="course-detail">English</div>
+            <div class="course-lessons">12 lesson/1.5 month</div>
+            <div class="course-level">intermediate</div>
+            <div class="course-price">250 L.E</div>
+          </div>
+    </div>
+</div>
+</div>
+
+<script>
+   const btn = document.getElementById("BTN");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "Arabic") {
+      btn.textContent = "EN"; 
+window.location.href = "mentor_Arabic.html";
+    } else {
+      btn.textContent = "Arabic";
+    window.location.href = "mentor.html";
+    }
+  });
+</script>
+
+    <script src="../src/bootstarp/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

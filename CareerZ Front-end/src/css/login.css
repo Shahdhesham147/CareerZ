@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+body{
+  width: 100%;
+  /* min-height: 100vh;  */
+  /* background-color: transparent; */
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+}
+/* NAVBAR */
+.navbar{
+z-index: 0;
+/* background-color: transparent; */
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.nav-back{
+  background-color: transparent;
+  transition: all 0.7s ease-in-out;
+}
+
+.back-default{
+  background-color: transparent;
+}
+.nav-link{
+    font-size: 18px;
+    font-weight: 500;
+    transition: ease-in-out 0.3s;
+}
+#BTN{
+    /* background-color: #b0e9fb; */
+    background-color: transparent;
+    width:50px;
+    height: 50px; 
+    font-size: 20px;
+    margin: 3;
+    /* border-radius: 50%; */
+    position: relative;
+    /* left: 550px; */
+    /* border-color: #b0e9fb; */
+    font-weight: bold;
+    border: none;
+    color: black;
+    transition: ease-in-out 0.3s;
+}
+#BTN:hover{
+    color: rgba(13, 70, 113, 1);
+/* transform: scale(1.1); */
+
+}
+.logo{
+    width: 80px;
+    height: 67px;
+}
+/* sign div */
+
+/* .sign{
+    position: relative;
+    /* top: 100px;
+} */
+.txt {
+  z-index: 1000;
+  text-align: center;
+  /* margin-top: 150px; */
+  color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+}
+.Sign{
+  color: rgba(0, 0, 0);
+  font-size: 20px;
+  text-align: center;
+    z-index: 1000;
+    background-color: white;
+  /* position: relative;
+  top: 150px;
+  margin-left: 640px; */
+}
+.already{
+  text-align: center;
+/* color: rgba(13, 70, 113, 1); */
+}
+/* Form */
+.sign-word{
+    font-weight: bolder !important;
+}
+form input{
+  z-index: 1000;
+    border: none !important; 
+    background-color: rgba(217, 217, 217, 0.8) !important;
+}
+
+.form-check-input{
+    background-color: rgb(223, 222, 222) !important;
+    border: none !important;
+}
+
+.btn{
+    font-weight: 600 !important;
+}
+
+.already{
+    color: rgb(94, 94, 94);
+    font-weight: 600;
+}
+
+.convertLogin{
+    text-decoration: none;
+color: rgba(13, 70, 113, 1);
+}
+
+.btn_login{
+  background-color: rgba(244, 233, 140, 1); 
+  color: #000; 
+  border: none; 
+  transition: 0.3s ease;
+  padding: 10px;
+  /* width: auto; */
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.btn_login:hover {
+  background-color: rgba(220, 210, 120, 1); 
+  color: #000;
+}
+.bg{
+    width: 800px;
+    height: 800px;
+}
+#particles-js{ position:absolute; width: 100%; height: 100%; background-color: transparent; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+
+.Card{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-self: center; 
+    align-items: center;
+    margin-top: 200px;
+    background-color: rgb(255, 255, 255, 0.8);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2); 
+    padding: 80px;
+    border-radius: 16px;
+    z-index: auto;
+    gap: 50px;
+    position: relative;
+}
+
+/* للموبايل (شاشة أصغر من 768px)  */
+@media (max-width: 768px) {
+
+  .bg,
+  .blueback {
+    display: none;
+  }
+
+  .sign {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+}
+
+/* لشاشات أصغر (الموبايل الصغير أقل من 480px) */
+ @media (max-width: 480px) {
+  .sign h1 {
+    font-size: 22px;
+  }
+
+  form input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html> 
+<html lang="ar"> 
+<head>     
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">     
+    <link rel="stylesheet" href="../src/css/mentor_Arabic.css">  
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <title>ملفات المعلمين</title> 
+</head> 
+<body>    
+       
+      <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+        <div class="container-fluid mx-5">
+          
+          <a class="navbar-brand" href="#">
+            <img src="../src/img/New logo 1.png" alt="" class="logo">
+          </a>
+        
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fa-lg"></i>
+          </button>
+          
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+          <li class="nav-item p-3"><a class="nav-link active" href="index_Arabic.html">الرئيسية</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="arabiccourses.html">الكورسات</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship_Arabic.html">التدريب</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">معلومات عنا</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">تواصل</a></li>
+            </ul>
+            
+            <form class="d-flex">
+   <div class="dropdown">
+  <i class="fa-solid fa-circle-user icon m-3 mx-5 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown"               
+     aria-expanded="false"
+     style="font-size: 30px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+    <li><a class="dropdown-item" href="mentor_Arabic.html"> حساب شخصي </a></li>
+    <li><a class="dropdown-item" href="All signUP_Arabic.html"> انشاء حساب </a></li>
+    <li><a class="dropdown-item" href="All login_Arabic.html">تسجيل دخول</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">تسجيل خروج</a></li>
+  </ul>
+</div>
+          <button class="" id="BTN" type="button">EN</button>
+
+            </form>
+            
+          </div>
+        </div>
+        
+        <script>
+          window.addEventListener('scroll' , function(){
+            var nav = document.getElementById('navbar')
+            if(window.scrollY > 5){
+              nav.classList.add('nav-back')
+              nav.classList.remove('back-trans')
+            }
+            else{
+              nav.classList.remove('nav-back')
+              nav.classList.add('back-trans')
+            }
+          })
+        </script>    
+    
+      </nav>
+    <div class="container">     
+    <div class="left-col">     
+    <div class="instructor">         
+        <img src="../src/img/02f8d963fe82f4b52e3e62bb86042daa9c5e9fad.jpg" alt="معلم">         
+        <h2>سارة أحمد</h2>         
+        <p>مدرسة لغة إنجليزية في المجلس الثقافي البريطاني</p>         
+        <button>احجز درس خاص</button>     
+    </div>      
+
+    <div class="about">         
+        <h2>عنّي</h2>         
+        <p>هذه أنا مدرسة لغة إنجليزية xxxxx x xx xx xx x xxxxx xxx xx xxxx xxxxxxx xxxx xxxxxx xxxx</p>         
+        <span>ماجستير</span>         
+        <span>التعليم عبر الإنترنت</span>     
+    </div>      
+
+    <div class="contact">         
+        <p>الموقع:</p>         
+        <i class="fa-solid fa-location-dot" style="color: #0077cc;"></i>القاهرة، مصر         
+        <p>البريد الإلكتروني:</p>         
+        <i class="fa-solid fa-envelope" style="color: #0077cc;"></i><a href=""> saraah@gmail.com</a>         
+        <p>لينكدإن</p>         
+        <i class="fa-brands fa-linkedin" style="color: #0077cc;"></i><a href=""> https//www.linkedin/saraah/121342123/12123133</a>     
+    </div>    
+    </div>    
+
+    <div class="right-col">     
+    <div class="edu">     
+        <h2>الخلفية التعليمية:</h2>      
+
+        <div class="edu-item">         
+            <img src="../src/img/images.jpeg" alt="جامعة حلوان">         
+            <div class="edu-info">             
+                <h4>جامعة حلوان</h4>             
+                <p>درجة البكالوريوس</p>         
+            </div>         
+            <span>عرض الشهادة</span>     
+        </div>      
+
+        <div class="edu-item">         
+            <img src="../src/img/download.png" alt="جامعة هارفارد">         
+            <div class="edu-info">             
+                <h4>جامعة هارفارد</h4>             
+                <p>درجة الماجستير</p>         
+            </div>         
+            <span>عرض الشهادة</span>     
+        </div> 
+    </div>         
+
+    <div class="courses">  
+            <button class="BUTTON"><span class="down">+</span>اضافه</button>  
+        <div class="course-item">             
+            <div class="course-detail">اللغة الإنجليزية</div>             
+            <div class="course-lessons">٨ دروس / شهر</div>             
+            <div class="course-level">للمبتدئين</div>             
+            <div class="course-price">٢٠٠ ج.م</div>           
+        </div>           
+
+        <div class="course-item">             
+            <div class="course-detail">اللغة الإنجليزية</div>             
+            <div class="course-lessons">١٢ درس / ١.٥ شهر</div>             
+            <div class="course-level">متوسط</div>             
+            <div class="course-price">٢٥٠ ج.م</div>           
+        </div>     
+    </div> 
+    </div> 
+    </div> 
+<script>
+     const btn = document.getElementById("BTN");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "EN") {
+      btn.textContent = "EN"; 
+    window.location.href = "mentor.html";
+
+    } else {
+      btn.textContent = "Arabic";
+ window.location.href = "mentor.html";
+
+    }
+  });
+</script>
+
+        <script src="../src/bootstarp/js/bootstrap.bundle.min.js"></script>
+</body> 
+</html>

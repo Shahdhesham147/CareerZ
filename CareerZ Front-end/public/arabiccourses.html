@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+
+         <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Css links -->
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/css/courses.css"> 
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الكورسات</title>
+
+</head>
+<body>
+<!-- شريط التنقل -->
+<nav class="navbar back-default navbar-expand-md fixed-top pb-0" id="navbar">
+    <div class="container-fluid mx-5">
+      
+      <a class="navbar-brand" href="#">
+        <img src="../src/img/New logo 1.png" alt="شعار" class="logo">
+      </a>
+    
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fa-lg d-flex justify-content-center align-items-center my-3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item p-3"><a class="nav-link active" href="index_Arabic.html">الرئيسية</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="arabiccourses.html">الكورسات</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship_Arabic.html">التدريب</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">معلومات عنا</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">تواصل</a></li>
+        </ul>
+        
+        <form class="d-flex">
+<div class="dropdown">
+  <i class="fa-solid fa-circle-user Icon m-3 mx-5 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown" 
+     aria-expanded="false"
+     style="font-size: 30px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+    <li><a class="dropdown-item" href="profile.html">الملف الشخصي</a></li>
+    <li><a class="dropdown-item" href="All SignUp.html">إنشاء حساب</a></li>
+    <li><a class="dropdown-item" href="All login.html">تسجيل الدخول</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">تسجيل الخروج</a></li>
+  </ul>
+</div>
+
+          <button id="Btn" type="button">EN</button>
+
+        </form>
+        
+      </div>
+    </div>    
+
+  </nav>
+<div class="All">
+<!-- الهيدر -->
+ <section class="header">
+  <img src="../src/img/bg.png" alt="خلفية" class="bgimg">
+<div class="text">
+      <h1>اكتشف مسارات التعلم</h1>
+      <div class="srchbar">
+        <input type="text" placeholder="ابحث عن كورس أو موضوع">
+        <button class="srch"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+</div>
+ </section>
+ <!-- التصنيفات -->
+<section class="filter">
+  <div class="categories">
+    <ul>
+      <li class="all">الكل</li>
+      <li class="filtersort" onclick="Sidebar()">
+        <i class="fa-solid fa-sliders fa-sm"></i>
+        تصفية & ترتيب</li>
+    </ul>
+  </div>
+</section>
+<!-- الفلتر -->
+<div class="sidebar" id="sidebar">
+    <h3>تصفية</h3>
+    <div class="filter-group">
+      <strong>السعر:</strong>
+      <label><input type="checkbox" name="price" value="0-20"> 0 - 250 جنيه</label>
+      <label><input type="checkbox" name="price" value="21-30"> 250 - 500 جنيه</label>
+      <label><input type="checkbox" name="price" value="31-50"> 500 - 1000 جنيه</label>
+    </div>
+
+    <div class="filter-group">
+      <strong>التصنيف:</strong>
+      <label><input type="checkbox" name="category" value="Web"> ويب</label>
+      <label><input type="checkbox" name="category" value="Design"> تصميم</label>
+      <label><input type="checkbox" name="category" value="Business"> أعمال</label>
+      <label><input type="checkbox" name="category" value="Data"> بيانات</label>
+      <label><input type="checkbox" name="category" value="Programming"> برمجة</label>
+    </div>
+
+    <h3>الترتيب</h3>
+    <div class="filter-group">
+      <label><input type="radio" name="sort" value="price-asc"> السعر: من الأقل للأعلى</label>
+      <label><input type="radio" name="sort" value="price-desc"> السعر: من الأعلى للأقل</label>
+      <label><input type="radio" name="sort" value="name-asc"> الاسم: من أ → ي</label>
+      <label><input type="radio" name="sort" value="name-desc"> الاسم: من ي → أ</label>
+    </div>
+      <button class="addfilter" onclick="Sidebar()">تطبيق الفلاتر</button>
+      <br>
+      <button class="closebtn" onclick="Sidebar()">إغلاق</button>
+  </div>
+<!-- قسم الكورسات -->
+<section class="courses">
+  <div class="card" onclick="window.location.href='course_dtaits.html'">
+      <img src="../src/img/img1.png" alt="UI/UX">
+      <h3>تصميم UI/UX</h3>
+      <p>مبتدئ</p>
+      <div class="details">
+        <span class="rate"><i class="fa-solid fa-star"></i> 4.7</span>
+        <span class="hrs">70 ساعة إجمالية</span>
+        <span class="price">مجاني</span>
+      </div>
+  </div>
+
+  <div class="card" onclick="window.location.href='course_dtaits.html'">
+      <img src="../src/img/img2.png" alt="تصميم جرافيك">
+      <h3>تصميم جرافيك</h3>
+      <p>مبتدئ</p>
+      <div class="details">
+        <span class="rate"><i class="fa-solid fa-star"></i> 4.6</span>
+        <span class="hrs">120 ساعة إجمالية</span>
+        <span class="price">مجاني</span>
+      </div>
+  </div>
+
+  <div class="card" onclick="window.location.href='course_dtaits.html'">
+      <img src="../src/img/img3.png" alt="برمجة بايثون">
+      <h3>برمجة بايثون</h3>
+      <p>مبتدئ</p>
+      <div class="details">
+        <span class="rate"><i class="fa-solid fa-star"></i> 4.8</span>
+        <span class="hrs">130 ساعة إجمالية</span>
+        <span class="price">500 جنيه</span>
+      </div>
+  </div>
+
+  <div class="card" onclick="window.location.href='course_dtaits.html'">
+      <img src="../src/img/img4.png" alt="التسويق الرقمي">
+      <h3>التسويق الرقمي</h3>
+      <p>مبتدئ</p>
+      <div class="details">
+        <span class="rate"><i class="fa-solid fa-star"></i> 4.6</span>
+        <span class="hrs">90 ساعة إجمالية</span>
+        <span class="price">100 جنيه</span>
+      </div>
+  </div>
+
+  <div class="card" onclick="window.location.href='course_dtaits.html'">
+      <img src="../src/img/img5.png" alt="مطور ويب كامل">
+      <h3>مطور ويب كامل (Full-stack)</h3>
+      <p>مبتدئ</p>
+      <div class="details">
+        <span class="rate"><i class="fa-solid fa-star"></i> 4.9</span>
+        <span class="hrs">120 ساعة إجمالية</span>
+        <span class="price">500 جنيه</span>
+      </div>
+  </div>
+
+  <div class="card" onclick="window.location.href='course_dtaits.html'">
+      <img src="../src/img/img6.png" alt="علم البيانات">
+      <h3>علم البيانات</h3>
+      <p>مبتدئ</p>
+    <div class="details">
+      <span class="rate"><i class="fa-solid fa-star"></i> 4.7</span>
+      <span class="hrs">60 ساعة إجمالية</span>
+     <span class="price">مجاني</span>
+    </div>
+  </div>
+</section>
+</div>
+<!-- javascript -->
+<script>
+  function Sidebar() {
+   const popCont = document.getElementById("sidebar");
+          popCont.style.visibility =
+              popCont.style.visibility ===
+                  "visible"
+                  ? "hidden"
+                  : "visible"; }
+</script>
+
+
+ <script>
+        const btn = document.getElementById("Btn");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "EN") {
+      btn.textContent = "EN"; 
+    window.location.href = "englishcourses.html";
+
+    } else {
+      btn.textContent = "Arabic";
+ window.location.href = "arabiccourses.html";
+
+    }
+  });
+</script>
+
+
+</body>
+
+</html>

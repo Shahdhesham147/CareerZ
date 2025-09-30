@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>نتيجة الاختبار</title>
+  <link rel="stylesheet" href="../src/css/all.min.css">
+  <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../src/css/Quiz result.css" />
+</head>
+<body>
+  <!-- شريط التنقل -->
+  <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+    <div class="container-fluid mx-5">
+      <a class="navbar-brand" href="#">
+        <img src="../src/img/New logo 1.png" alt="الشعار" class="logoo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+        aria-expanded="false" aria-label="تبديل القائمة">
+        <i class="fa-solid fa-bars fa-lg"></i>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+        <li class="nav-item p-3"><a class="nav-link active" href="index_Arabic.html">الرئيسية</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="arabiccourses.html">الكورسات</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship_Arabic.html">التدريب</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">معلومات عنا</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">تواصل</a></li>
+        </ul>
+      
+
+        <form class="d-flex">
+  <div class="dropdown">
+  <i class="fa-solid fa-circle-user icon m-3 mx-5 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown"               
+     aria-expanded="false"
+     style="font-size: 30px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+    <li><a class="dropdown-item" href="profile_Arabic.html"> حساب شخصي </a></li>
+    <li><a class="dropdown-item" href="All signUP_Arabic.html"> انشاء حساب </a></li>
+    <li><a class="dropdown-item" href="All login_Arabic.html">تسجيل دخول</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">تسجيل خروج</a></li>
+  </ul>
+</div>
+          <button id="BTN" type="button">EN</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener('scroll', function () {
+        var nav = document.getElementById('navbar')
+        if (window.scrollY > 5) {
+          nav.classList.add('nav-back')
+          nav.classList.remove('back-trans')
+        }
+        else {
+          nav.classList.remove('nav-back')
+          nav.classList.add('back-trans')
+        }
+      })
+    </script>
+  </nav>
+
+  <div class="All">
+    <main class="card">
+      <!-- العنوان -->
+      <header class="header">
+        <div class="brand">
+          <div class="logo">
+            <img src="../src/img/New logo 1.png" alt="الشعار" />
+          </div>
+        </div>
+
+        <div class="title-wrap">
+          <h1 class="title">🎉 نتيجتك</h1>
+          <p class="subtitle">
+            بناءً على إجاباتك، أنت مناسب بشكل رائع لـ
+            <a href="#" class="link">تصميم واجهة وتجربة المستخدم (UI/UX)!</a>
+          </p>
+          <p class="muted">لديك عقلية إبداعية وشغف بالتصميم.</p>
+        </div>
+      </header>
+
+      <!-- الدورة المقترحة -->
+      <section class="recommended">
+        <h2 class="section-title">الدورة المقترحة</h2>
+        <div class="course">
+          <div class="course-thumb">
+            <img src="../src/img/image 27.png" alt="تصميم UI/UX" />
+          </div>
+          <div class="course-info">
+            <h3 class="course-title">تصميم UI/UX</h3>
+            <div class="badge">مبتدئ</div>
+            <p class="course-desc">
+              تعلم مبادئ تصميم واجهات المستخدم، تجربة المستخدم، وعمل النماذج الأولية.
+            </p>
+           <a href="arabiccourses.html"> <button class="btn btn-primary" id="viewCourseBtn">عرض الدورة</button></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- خارطة الطريق -->
+      <section class="roadmap">
+        <h2 class="section-title">خطة تعلمك</h2>
+        <p class="muted center">
+          اتبع <span class="link">خطة شاملة</span> للوصول إلى مسارك المهني.
+        </p>
+
+        <div class="progress-wrap">
+          <div class="progress-track">
+            <div class="progress-bar" id="progressBar" style="width: 30%;"></div>
+          </div>
+          <div class="progress-value" id="progressValue">30%</div>
+        </div>
+
+        <div class="grid">
+          <!-- المراحل -->
+          <div class="cols">
+            <article class="box">
+              <div class="box-head">
+                <h3>الأساسيات</h3>
+                <p class="muted">تعلّم أساسيات المجال</p>
+              </div>
+              <ul class="list">
+                <li>مقدمة في التصميم</li>
+                <li>مبادئ تصميم الواجهات</li>
+              </ul>
+              <button class="btn btn-outline">ابدأ</button>
+            </article>
+
+            <article class="box is-active">
+              <div class="box-head">
+                <h3>الأدوات والمهارات</h3>
+                <p class="muted">تعلّم الأدوات والمهارات</p>
+              </div>
+              <ul class="list">
+                <li>أساسيات Figma</li>
+                <li>مبادئ Photoshop</li>
+              </ul>
+              <button class="btn btn-outline">ابدأ</button>
+            </article>
+
+            <article class="box">
+              <div class="box-head">
+                <h3>المعرض (Portfolio)</h3>
+                <p class="muted">اعرض أعمالك ومشاريعك</p>
+              </div>
+              <ul class="list">
+                <li>إنجاز مشروعين</li>
+                <li>رفعها إلى المعرض</li>
+              </ul>
+              <button class="btn btn-outline">ابدأ</button>
+            </article>
+
+            <article class="box">
+              <div class="box-head">
+                <h3>التحضير للعمل</h3>
+                <p class="muted">الاستعداد لسوق العمل</p>
+              </div>
+              <ul class="list">
+                <li>منشئ السيرة الذاتية</li>
+                <li>تحسين LinkedIn</li>
+                <li>محاكاة المقابلات</li>
+              </ul>
+              <button class="btn btn-outline">ابدأ</button>
+            </article>
+          </div>
+
+          <!-- الخطوات -->
+          <aside class="steps">
+            <h4 class="steps-title">خطوات التقدم</h4>
+            <ol>
+              <li class="step done"><span class="dot">1</span><span>الأساسيات</span></li>
+              <li class="step current"><span class="dot">2</span><span>الأدوات والمهارات</span></li>
+              <li class="step"><span class="dot">3</span><span>المعرض</span></li>
+              <li class="step"><span class="dot">4</span><span>التحضير للعمل</span></li>
+            </ol>
+          <a href="internship_Arabic.html"> <button class="btn btn-cta" id="ctaBtn">
+              أكمل خطة التعلم واحصل على فرص عمل
+            </button></a> 
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+<script>
+        const btn = document.getElementById("BTN");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "EN") {
+      btn.textContent = "EN"; 
+    window.location.href = "Quiz result.html";
+
+    } else {
+      btn.textContent = "Arabic";
+ window.location.href = "Quiz result.html";
+
+    }
+  });
+</script>
+  <script src="../src/bootstarp/js/bootstrap.bundle.min.js"></script>
+  <script src="../src/js/Quiz result.js"></script>
+</body>
+</html>

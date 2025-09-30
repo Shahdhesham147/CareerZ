@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Css links -->
+    <link rel="stylesheet" href="../src/css/login_Arabic.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+</head>
+<body>
+    
+  <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+        <div class="container-fluid mx-5">
+          
+          <a class="navbar-brand" href="#">
+            <img src="../src/img/New logo 1.png" alt="" class="logo">
+          </a>
+        
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fa-lg"></i>
+          </button>
+          
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item p-3"><a class="nav-link active" href="index_Arabic.html">الرئيسية</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="arabiccourses.html">الكورسات</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship_Arabic.html">التدريب</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">معلومات عنا</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">تواصل</a></li>
+            </ul>
+            
+            <form class="d-flex">
+  <div class="dropdown">
+  <i class="fa-solid fa-circle-user icon m-3 mx-5 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown"               
+     aria-expanded="false"
+     style="font-size: 30px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+    <li><a class="dropdown-item" href="profile_Arabic.html"> حساب شخصي </a></li>
+    <li><a class="dropdown-item" href="All signUP_Arabic.html"> انشاء حساب </a></li>
+    <li><a class="dropdown-item" href="All login_Arabic.html">تسجيل دخول</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">تسجيل خروج</a></li>
+  </ul>
+</div>
+          <button class="" id="Btn" type="button">EN</button>
+
+            </form>
+            
+          </div>
+        </div>
+        
+      </nav>
+
+    <div class=" sign row row-cols-1 row-cols-md-3 w-100" >
+        <div class=" col p-5 my-5 login">
+            <h1 class="sign-word">تسجيل الدخول</h1>
+            <form>
+                
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">البريد الإلكتروني</label>
+                    <input type="email" class="form-control rounded-4" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">كلمة المرور </label>
+                    <input type="password" class="form-control rounded-4" id="exampleInputPassword1">
+                </div>
+                
+                <div class="btn-submit text-center p-3">
+                    <button type="submit" class="btn  mt-4 btn_login">تسجيل الدخول</button>
+                </div>
+                <p class="pt-1 already text-center">نسيت <a href="" class="convertLogin">اسم المستخدم</a> أو <a href="" class="convertLogin">كلمة المرور</a>؟</p>
+            </form>
+        </div>
+        
+
+        <div class="middle-pic">
+          <img src="../src/img/middle-pic.png" alt="" class="bg">
+        </div>
+
+
+        <div class="blueback col my-5">
+
+        </div>
+    </div>
+<script>
+  
+// API
+document.getElementById("loginForm").addEventListener("submit",async (event) => {
+  event.preventDefault();
+
+  const email = document.getElementById("exampleInputEmail1").value;
+  const password = document.getElementById("exampleInputPassword1").value;
+
+  if (!email) {
+    alert("Email is required");
+    return;
+  }
+  if (!password){
+    alert("Password is required")
+    return;
+  }
+
+  try {
+    const res = await fetch ("http://localhost:8888/login",{
+      method: "POST",
+      headers: {"Content-Type" : "application/json"},
+      body : JSON.stringify({
+        email,
+        password
+      })
+    })
+
+    const data = await res.json();
+
+    if (res.ok) {
+      localStorage.setItem("token", data.token);
+      alert("Login successful")
+      window.location.href = "./quiz intro.html";
+    }else{
+      alert(data.error || data.message || "Login failed!")
+    }
+  } catch (error) {
+    console.error("Request failed:",error)
+    alert("⚠️ Server error, please try again later.");
+  }
+})
+
+     const btn = document.getElementById("Btn");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "EN") {
+      btn.textContent = "EN"; 
+    window.location.href = "login.html";
+
+    } else {
+      btn.textContent = "Arabic";
+ window.location.href = "login_Arabic.html";
+
+    }
+  });
+</script>
+   <script src="../src/bootstarp/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

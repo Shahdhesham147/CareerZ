@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../src/css/All SignUp.css">
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <!-- particles.js container --> <div id="particles-js"></div> 
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+  <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+    <div class="container-fluid mx-5">
+      
+      <a class="navbar-brand" href="#">
+        <img src="../src/img/newlogo.png" alt="" class="logo">
+      </a>
+      <!-- <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fa-lg"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <ul class="navbar-nav justify-content-center align-items-center">
+          <li class="nav-item p-3"><a class="nav-link active" href="#top">Home</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#courses">Courses</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#internship">Internship</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#action">About Us</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#Footer">Contact</a></li>
+        </ul>
+      </div> -->
+        <!-- <form class="d-flex">
+       أيقونة يوزر مع dropdown
+<div class="dropdown">
+  <i class="fa-solid fa-user icon m-3 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown" 
+     aria-expanded="false"
+     style="font-size: 24px; cursor: pointer;"></i>
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+ <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+    <li><a class="dropdown-item" href="All SignUp.html"> sign up</a></li>
+    <li><a class="dropdown-item" href="All login.html">login</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">log out</a></li>
+  </ul>
+</div>
+                 </form> -->
+      <button class="" id="BTN" type="button">AR</button>
+      </div>
+    <!-- </div> -->
+    
+    <!-- <script>
+      window.addEventListener('scroll' , function(){
+        var nav = document.getElementById('navbar')
+        if(window.scrollY > 500){
+          nav.classList.add('nav-back')
+          nav.classList.remove('back-default')
+        }
+        else{
+          nav.classList.remove('nav-back')
+          nav.classList.add('back-default')
+        }
+      })
+    </script>     -->
+
+  </nav>
+
+<h1 class="Text">Discover Learn Earn</h1>
+<h4 class="Sign">Sign Up</h4>
+<div class="line"></div>
+<div class="Card">
+    
+    <div class="card1"> 
+        <p class="txt"> Student </p>
+ <button class="Btn" onclick="window.location.href='signUp.html'"> Get Started </button>
+    </div>
+        <div class="card2">
+       <p class="txt"> Mentor </p>
+          <button class="Btn" onclick="window.location.href='signUp_mentor.html'"> Get Started </button></a>
+        </div>
+            <div class="card3">
+                 <p class="txt"> Company </p>
+                  <button class="Btn" onclick="window.location.href='signUp_company.html'"> Get Started </button>
+            </div>
+</div>
+<script>
+    const btn = document.getElementById("BTN");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "AR") {
+      btn.textContent = "EN"; 
+window.location.href = "All signUP_Arabic.html";
+    } else {
+      btn.textContent = "AR";
+    window.location.href = "All SignUp.html";
+    }
+  });
+
+</script>
+<script src="../src/js/particles.js"></script>
+<script src="../src/bootstarp/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

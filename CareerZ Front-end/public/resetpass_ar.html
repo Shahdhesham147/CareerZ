@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/resetpass_Arabic.css">
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <title>إعادة تعيين كلمة المرور</title>
+</head>
+<body>
+      <!-- شريط التنقل -->
+  <nav class="navbar back-default navbar-expand-md fixed-top pb-0" id="navbar">
+        <div class="container-fluid mx-5">
+      
+      <a class="navbar-brand" href="#">
+        <img src="../src/img/New logo 1.png" alt="" class="logo">
+      </a>
+    
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="تبديل القائمة">
+        <i class="fa-solid fa-bars fa-lg d-flex justify-content-center align-items-center my-3"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item p-3"><a class="nav-link active" href="index_Arabic.html">الرئيسية</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="arabiccourses.html">الكورسات</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="internship_Arabic.html">التدريب</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">معلومات عنا</a></li>
+          <li class="nav-item p-3"><a class="nav-link" href="#">تواصل</a></li>
+        </ul>
+        
+        <form class="d-flex">
+           <div class="dropdown">
+  <i class="fa-solid fa-circle-user icon m-3 mx-5 dropdown-toggle" 
+     id="userMenu" 
+     data-bs-toggle="dropdown"               
+     aria-expanded="false"
+     style="font-size: 30px; cursor: pointer;"></i>
+
+  <ul class="dropdown-menu" aria-labelledby="userMenu">
+    <li><a class="dropdown-item" href="profile.html"> حساب شخصي </a></li>
+    <li><a class="dropdown-item" href="All signUP_Arabic.html"> انشاء حساب </a></li>
+    <li><a class="dropdown-item" href="All login_Arabic.html">تسجيل دخول</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">تسجيل خروج</a></li>
+  </ul>
+</div>
+          <button class="" id="BTN" type="button">EN</button>
+        </form>
+        
+      </div>
+    </div>    
+
+  </nav>
+
+ <div class="All">
+    <h4>إعادة تعيين كلمة المرور</h4>
+<div class="Card">
+     <label>كلمة المرور</label><br>
+    <input type="password" placeholder="أدخل كلمة المرور الجديدة" required> <br><br>
+    <label>تأكيد كلمة المرور</label> <br> 
+    <input type="password" placeholder="أكد كلمة المرور" required>
+    <br> <br>
+    <div class="btn"> 
+      <button class="reset">إعادة تعيين</button>
+    </div>
+    </div>
+</div>
+<script>
+ const btn = document.getElementById("BTN");
+  btn.addEventListener("click", function () {
+    if (btn.textContent === "EN") {
+      btn.textContent = "EN"; 
+    window.location.href = "resetpass.html";
+
+    } else {
+      btn.textContent = "Arabic";
+ window.location.href = "resetpass_ar.html";
+
+    }
+  });
+  </script>
+
+<script src="../src/bootstarp/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

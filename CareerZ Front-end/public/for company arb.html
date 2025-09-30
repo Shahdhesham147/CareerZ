@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/css/for company.css">
+  <title>أضف فرصة عمل</title>
+</head>
+<body>
+  <div class="container">
+    <h2>أضف فرصة عمل</h2>
+    <form>
+      <div class="form">
+        <div>
+          <label>المسمى الوظيفي</label>
+          <input type="text" required>
+        </div>
+        <div>
+          <label>المدة</label>
+          <input type="text" placeholder="شهر" required>
+        </div>
+        <div>
+          <label>الراتب</label>
+          <input type="text" placeholder="000 ج.م" required>
+        </div>
+      </div>
+
+      <div class="inf">
+        <p>النوع</p>
+        <label><input type="radio" name="type"> تدريب</label>
+        <label><input type="radio" name="type"> وظيفة</label>
+      </div>
+
+      <div class="inf">
+        <p>مكان العمل</p>
+        <label><input type="radio" name="location"> في الموقع</label>
+        <label><input type="radio" name="location"> عن بُعد</label>
+        <label><input type="radio" name="location"> هجين</label>
+      </div>
+
+      <div class="des">
+        <p>الوصف</p>
+        <textarea required></textarea>
+      </div>
+      <button type="submit">رفع</button>
+    </form>
+  </div>
+</body>
+</html>

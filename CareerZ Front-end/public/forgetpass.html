@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/css/forgetpass.css">
+    <title>Forget password</title>
+</head>
+<body>
+    <!-- particles.js container --> <div id="particles-js"></div> 
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+    <nav class="navbar back-trans navbar-expand-md fixed-top pb-0" id="navbar">
+    <div class="container-fluid mx-5">
+    <a class="navbar-brand" href="#">
+      <img src="../src/img/newlogo.png" alt="" class="logo">
+    </a>
+      <button class="" id="BTN" type="button">AR</button>
+    </div>
+    </nav>  
+
+<!-- <div class="All"> -->
+  <div class="container">
+    <form>
+    <div class="icon">
+        <img src="../src/img/questionmark.png" alt="">
+    </div>
+    <h2>Forgot password?</h2>
+    <p>Enter your email to receive <b>Verification OTP</b>.</p>
+    <input type="email" placeholder="example@gmail.com" required>
+    <div class="buttons">
+      <button class="btn cancel" id="cancel">Cancel</button>
+      <button class="btn send" id="next">Send</button>
+    </div>
+  </form>
+  </div>
+<!-- </div> -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", ()=>{
+    const sendBtn = document.getElementById('sendBtn');
+    const cancelBtn = document.getElementById('cancelBtn');
+    const emailInput = document.getElementById('email');
+
+    sendBtn.addEventListener('click', async () => {
+      const email = emailInput.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+      if(!email){
+        alert('Please enter your email address.');
+        return;
+      }else if(!emailRegex.test(email)){
+        alert ('Please enter a valid email.');
+        return;        
+      }
+
+      try {
+        const response = await fetch('http://localhost:8888/forgot-password',{
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email })
+        })
+
+        const data = await response.json();
+        if(response.ok){
+          alert ('OTP has been sent to ${email}')
+          localStorage.setItem("resetEmail", email);
+          window.location.href = "otp.html";
+        }else{
+          alert (data.message || 'An error occurred, please try again later')
+        }
+      } catch (error) {
+        console.log('Error:', error)
+      }
+    });
+  
+    cancelBtn.addEventListener('click', ()=>{
+      window.location.href = './login.html'
+    });
+  })
+
+  const btn = document.getElementById("BTN");
+
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (btn.textContent.trim() === "AR") {
+      btn.textContent = "EN"; 
+      window.location.href = "forgetpass_ar.html";
+    } else {
+      btn.textContent = "AR";
+      window.location.href = "forgetpass.html";
+    }
+  });
+</script>
+</script><script src="../src/js/particles.js"></script>
+<script src="../src/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+

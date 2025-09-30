@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Profile</title>
+  <link rel="stylesheet" href="../src/css/comp.css">
+</head>
+<body class="obody">
+
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo-section">
+        <div class="logo-box">Logo</div>
+        <div class="company-name">ABC Company</div>
+      </div>
+      <img src="../src/img/hola.png" alt="Company Image">
+    </div>
+
+    <!-- Description -->
+    <div class="description">Description</div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="active">Internships</button>
+      <button class="diva">Jobs</button>
+    </div>
+
+    <!-- Jobs -->
+    <div class="jobs">
+      <div class="job-card">
+        <div class="job-info">
+          <div class="calendar"><img src="../src/img/eggo.png" width="80px"></div>
+          <div class="job-details">
+            IT Specialist
+            <span>14 Feb - 31 May</span>
+          </div>
+        </div>
+        <button class="apply-btn">Apply</button>
+      </div>
+
+      <div class="job-card" >
+        <div class="job-info">
+          <div class="calendar"><img src="../src/img/Group.png" width="80px"></div>
+          <div class="job-details">
+            IT Specialist
+            <span>28 Feb - 15 June</span>
+          </div>
+        </div>
+        <button class="apply-btn">Apply</button>
+      </div>
+
+      <div class="job-card" >
+        <div class="job-info">
+          <div class="calendar"><img src="../src/img/Vector.png" width="80px"></div>
+          <div class="job-details">
+            UI/UX Specialist
+            <span>14 Feb - 31 May</span>
+          </div>
+        </div>
+        <button class="apply-btn">Apply</button>
+      </div>
+
+      <div class="job-card">
+        <div class="job-info">
+          <div class="calendar"><img src="../src/img/Group.png" width="80px"></div>
+          <div class="job-details">
+            Accountant
+            <span>14 Feb - 31 May</span>
+          </div>
+        </div>
+        <button class="apply-btn">Apply</button>
+     </div> 
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div><img src="../src/img/gamil.png" width="20px"> Email: abcco@gmail.com</div>
+      <div><img src="../src/img/hotline.png" width="20px"> Hotline: 19920</div>
+    </div>
+  </div><script>
+const container = document.querySelector('.container');
+
+container.addEventListener('mouseenter', () => {
+  container.style.transform = 'scale(1.02)';
+  container.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
+});
+
+container.addEventListener('mouseleave', () => {
+  container.style.transform = 'scale(1)';
+  container.style.boxShadow = 'none';
+});</script>
+
+</body>
+</html>

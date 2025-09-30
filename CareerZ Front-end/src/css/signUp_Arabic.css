@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body{
+    background-color: rgb(224, 247, 255, 0.4) !important;
+}
+/* NAVBAR */
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.back-default{
+  background-color: #fff;
+}
+
+.logo{
+    width: 60px;
+    height: 70px;
+}
+
+.icon{
+    font-size: 25px;
+}
+
+#Btn{
+    background-color: #b0e9fb;
+    width:60px;
+    height: 50px; 
+    border-radius: 50%;
+    position: relative;
+    border-color: #b0e9fb;
+    font-weight: bold;
+}
+
+
+
+
+.FORM{
+  margin-top: 80px;
+}
+
+/* صندوق التسجيل */
+.sign{
+    position: relative;
+    direction: ltr;
+    text-align: right;
+    
+}
+
+/* الخلفية الزرقاء على اليمين */
+.blueback{
+    background-color: #b0e9fb;
+    height: 100vh;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px; 
+    position: absolute;
+    right: 5px;
+    top: 100px;
+}
+
+/* الصورة الوسطى */
+.middle-pic{
+    position: absolute;
+    z-index: 2;
+    width: 200px;
+    right: 30%;
+}
+
+/* فورم التسجيل */
+.sign-word{
+    font-weight: bolder !important;
+}
+
+/* حقول الإدخال */
+form input{
+    border: none !important; 
+    background-color: rgb(176, 233, 251,0.67) !important;
+}
+
+/* أزرار الراديو */
+.form-check-input{
+    background-color: rgb(223, 222, 222) !important;
+    border: none !important;
+}
+
+/* الراديو المحدد */
+.form-check-input[type="radio"]:checked{
+    background-color: rgba(16, 143, 181, 0.67) !important;
+}
+
+/* أزرار الإرسال */
+.btn{
+    font-weight: 600 !important;
+}
+
+/* نص تذكير إذا كان لديه حساب مسبق */
+.already{
+    color: rgb(94, 94, 94);
+    font-weight: 600;
+}
+
+/* رابط تسجيل الدخول */
+.convertLogin{
+    text-decoration: none;
+    color: rgb(72, 212, 255);
+}
+.gender {
+  margin-left: 230px; 
+}
+
+.bg{
+    width: 800px;
+    height: 800px;
+    position: relative;
+    top: 100px;
+   
+}
+.SignUP{
+position: relative;
+top: 100px;
+
+
+}
+
+.btn{
+  background-color: rgba(220, 210, 120, 1); 
+
+}
+
+.btn_sginUP {
+    background-color: rgba(244, 233, 140, 1) !important;
+    color: #000 !important;  
+    border: none;
+}
+
+.btn_sginUP:hover {
+    background-color: rgba(230, 220, 120, 1) !important;
+    color: #000 !important;
+}
+
+
+
+   
+/* للموبايل (شاشة أصغر من 768px) */
+@media (max-width: 768px) {
+  .bg,
+  .blueback {
+    display: none;
+  }
+
+  .sign {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  .gender{
+   position: relative;
+   right: 130px;
+    
+  }
+}
+
+/* لشاشات أصغر (الموبايل الصغير أقل من 480px) */
+@media (max-width: 480px) {
+  .sign h1 {
+    font-size: 22px;
+  }
+
+  form input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}

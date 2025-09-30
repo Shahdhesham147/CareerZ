@@ -1,0 +1,180 @@
+body {
+      font-family: Arial, sans-serif;
+      background-color: #FFFFFF4D;
+      margin: 0;
+      padding: 20px 60px;
+    }
+.logo{
+    width: 60px;
+    height: 70px;
+   
+  
+}
+
+.icon{
+    font-size: 25px;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); 
+}
+  
+.nav-back{
+    background-color: rgba(207, 238, 255);
+    transition: all 0.7s ease-in-out;
+   
+}
+  
+.back-trans{
+    background-color: transparent;
+
+}
+.FORM{
+  margin-top: 80px;
+}
+#BTN{
+    background-color: #b0e9fb;
+    width:60px;
+    height: 50px; 
+    border-radius: 50%;
+    position: relative;
+    border-color: #b0e9fb;
+    font-weight: bold;
+}
+#navbar{
+  background-color: white;
+}
+    .logo img {
+      width: 55px;
+      height: 70px;
+    }
+
+    .page {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .form {
+      flex: 1;
+      width: 400px;
+      min-width: 320px;
+      max-width: 400px;
+    }
+
+    .form h2 {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 4px;
+      color: black;
+    }
+
+    .form p {
+      font-size: 14px;
+      color: #0000007A;
+      margin-top: 0px;
+      margin-bottom: 25px;
+    }
+
+    .form input,
+    .form textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+   .All{
+    margin-top: 120px;
+   }
+    .form textarea {
+      resize: none;
+    }
+
+    .form button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 14px;
+      background-color: #0D4671;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .form button:hover {
+      background-color: #0456a8;
+    }
+
+    .login-link {
+      margin-top: 15px;
+      font-size: 14px;
+      text-align: center;
+      color: #0000008F;
+    }
+
+    .login-link a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    .illustration {
+      flex: 1;
+      text-align: center;
+    }
+
+    .illustration img {
+      width: 520px;
+      min-width: 300px;
+      margin-bottom: 5px;
+    }
+
+    .upload-box {
+      border: 2px dashed #ccc;
+      border-radius: 6px;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: rgb(121, 119, 119);
+      width: 420px;
+      min-width: 280px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .upload-box:hover {
+      border-color: #007bff;
+      background: #f0f8ff;
+      color: #007bff;
+    }
+
+    .upload-box input[type="file"] {
+      display: none;
+    }
+
+    .upload-box label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .upload-box i {
+      font-size: 20px;
+      color: #0000007A;
+      transition: color 0.3s ease;
+    }
+
+    .upload-box:hover i {
+      color: #007bff;
+    }
+    
